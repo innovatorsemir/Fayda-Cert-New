@@ -1,0 +1,344 @@
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
+import { 
+  FileCheck, 
+  LogOut, 
+  Upload, 
+  CheckCircle, 
+  AlertCircle, 
+  Clock, 
+  Users, 
+  Settings,
+  History,
+  Shield,
+  Bell,
+  Building2,
+  Calendar,
+  Plus,
+  Eye,
+  TrendingUp
+} from "lucide-react";
+
+export default function InstitutionDashboard() {
+  const certificates = [
+    {
+      id: "cert-001",
+      studentName: "Sarah Johnson",
+      faydaId: "FYD-2023-001234",
+      program: "Bachelor of Science in Computer Science",
+      gpa: "3.85",
+      issueDate: "2023-06-15",
+      status: "signed",
+      verificationCount: 5
+    },
+    {
+      id: "cert-002", 
+      studentName: "Ahmed Hassan",
+      faydaId: "FYD-2023-005678",
+      program: "Master of Engineering",
+      gpa: "3.92",
+      issueDate: "2023-12-10",
+      status: "pending_signature",
+      verificationCount: 0
+    },
+    {
+      id: "cert-003",
+      studentName: "Maria Rodriguez",
+      faydaId: "FYD-2024-001122",
+      program: "Bachelor of Arts in Design",
+      gpa: "3.78",
+      issueDate: "2024-01-20",
+      status: "draft",
+      verificationCount: 0
+    }
+  ];
+
+  const verificationRequests = [
+    {
+      id: 1,
+      requestor: "TechCorp HR Department",
+      studentName: "Sarah Johnson",
+      certificate: "Bachelor of Science in Computer Science",
+      purpose: "Employment verification",
+      date: "2024-01-15",
+      status: "approved"
+    },
+    {
+      id: 2,
+      requestor: "Innovation Labs",
+      studentName: "Ahmed Hassan",
+      certificate: "Master of Engineering", 
+      purpose: "Job application",
+      date: "2024-01-18",
+      status: "pending"
+    },
+    {
+      id: 3,
+      requestor: "Graduate School XYZ",
+      studentName: "Sarah Johnson",
+      certificate: "Bachelor of Science in Computer Science",
+      purpose: "Graduate admission",
+      date: "2024-01-12",
+      status: "approved"
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+      {/* Header */}
+      <header className="bg-white/80 backdrop-blur-md border-b border-white/20">
+        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <Link to="/" className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center">
+                <FileCheck className="h-6 w-6 text-white" />
+              </div>
+              <div>
+                <h1 className="text-xl font-bold text-slate-900">Fayda</h1>
+                <p className="text-xs text-slate-600">Institution Portal</p>
+              </div>
+            </Link>
+            <div className="h-6 w-px bg-slate-300"></div>
+            <div className="flex items-center gap-2">
+              <Building2 className="h-5 w-5 text-blue-600" />
+              <span className="font-medium text-slate-900">University of Technology</span>
+              <Badge variant="secondary" className="bg-green-100 text-green-700 border-green-200">
+                <CheckCircle className="mr-1 h-3 w-3" />
+                Verified
+              </Badge>
+            </div>
+          </div>
+          <div className="flex items-center gap-3">
+            <Button variant="ghost" size="sm">
+              <Bell className="h-4 w-4" />
+            </Button>
+            <Button variant="ghost" size="sm">
+              <Settings className="h-4 w-4" />
+            </Button>
+            <Link to="/login">
+              <Button variant="outline" size="sm">
+                <LogOut className="mr-2 h-4 w-4" />
+                Sign Out
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </header>
+
+      <div className="container mx-auto px-6 py-8">
+        {/* Welcome Section */}
+        <div className="mb-8 flex items-center justify-between">
+          <div>
+            <h1 className="text-3xl font-bold text-slate-900 mb-2">Institution Dashboard</h1>
+            <p className="text-slate-600">Manage certificates and monitor verification requests</p>
+          </div>
+          <Button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">
+            <Plus className="mr-2 h-4 w-4" />
+            Issue New Certificate
+          </Button>
+        </div>
+
+        {/* Stats Cards */}
+        <div className="grid md:grid-cols-4 gap-6 mb-8">
+          <Card className="bg-white/70 backdrop-blur-sm border-white/40">
+            <CardContent className="p-6">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-2xl font-bold text-slate-900">{certificates.length}</p>
+                  <p className="text-sm text-slate-600">Total Certificates</p>
+                </div>
+                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                  <FileCheck className="h-6 w-6 text-blue-600" />
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+          <Card className="bg-white/70 backdrop-blur-sm border-white/40">
+            <CardContent className="p-6">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-2xl font-bold text-slate-900">
+                    {certificates.filter(c => c.status === "signed").length}
+                  </p>
+                  <p className="text-sm text-slate-600">Digitally Signed</p>
+                </div>
+                <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
+                  <Shield className="h-6 w-6 text-green-600" />
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+          <Card className="bg-white/70 backdrop-blur-sm border-white/40">
+            <CardContent className="p-6">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-2xl font-bold text-slate-900">
+                    {certificates.reduce((sum, cert) => sum + cert.verificationCount, 0)}
+                  </p>
+                  <p className="text-sm text-slate-600">Total Verifications</p>
+                </div>
+                <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
+                  <TrendingUp className="h-6 w-6 text-purple-600" />
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+          <Card className="bg-white/70 backdrop-blur-sm border-white/40">
+            <CardContent className="p-6">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-2xl font-bold text-slate-900">
+                    {verificationRequests.filter(r => r.status === "pending").length}
+                  </p>
+                  <p className="text-sm text-slate-600">Pending Requests</p>
+                </div>
+                <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center">
+                  <Clock className="h-6 w-6 text-orange-600" />
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        <div className="grid lg:grid-cols-3 gap-8">
+          {/* Certificate Management */}
+          <div className="lg:col-span-2">
+            <Card className="bg-white/70 backdrop-blur-sm border-white/40">
+              <CardHeader className="flex flex-row items-center justify-between">
+                <CardTitle className="text-xl">Certificate Management</CardTitle>
+                <Button variant="outline" size="sm">
+                  <Upload className="mr-2 h-4 w-4" />
+                  Bulk Upload
+                </Button>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  {certificates.map((cert) => (
+                    <div key={cert.id} className="border border-slate-200 rounded-lg p-4 bg-white/50">
+                      <div className="flex items-start justify-between mb-3">
+                        <div className="flex-1">
+                          <h3 className="font-semibold text-slate-900 mb-1">{cert.studentName}</h3>
+                          <p className="text-sm text-slate-600 mb-1">{cert.program}</p>
+                          <p className="text-xs text-slate-500 mb-2">Fayda ID: {cert.faydaId}</p>
+                          <div className="flex items-center gap-4 text-xs text-slate-500">
+                            <span className="flex items-center gap-1">
+                              <Calendar className="h-3 w-3" />
+                              Issued: {cert.issueDate}
+                            </span>
+                            <span>GPA: {cert.gpa}</span>
+                            <span>{cert.verificationCount} verifications</span>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Badge 
+                            variant="secondary"
+                            className={
+                              cert.status === "signed" ? "bg-green-100 text-green-700 border-green-200" :
+                              cert.status === "pending_signature" ? "bg-orange-100 text-orange-700 border-orange-200" :
+                              "bg-gray-100 text-gray-700 border-gray-200"
+                            }
+                          >
+                            {cert.status === "signed" ? (
+                              <CheckCircle className="mr-1 h-3 w-3" />
+                            ) : cert.status === "pending_signature" ? (
+                              <Clock className="mr-1 h-3 w-3" />
+                            ) : (
+                              <AlertCircle className="mr-1 h-3 w-3" />
+                            )}
+                            {cert.status.replace("_", " ").charAt(0).toUpperCase() + cert.status.replace("_", " ").slice(1)}
+                          </Badge>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Button size="sm" variant="outline">
+                          <Eye className="mr-2 h-3 w-3" />
+                          View Details
+                        </Button>
+                        {cert.status === "draft" && (
+                          <Button size="sm" variant="outline">
+                            <Upload className="mr-2 h-3 w-3" />
+                            Upload
+                          </Button>
+                        )}
+                        {cert.status === "pending_signature" && (
+                          <Button size="sm" className="bg-blue-600 hover:bg-blue-700 text-white">
+                            <Shield className="mr-2 h-3 w-3" />
+                            Sign Certificate
+                          </Button>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Verification Requests */}
+          <div>
+            <Card className="bg-white/70 backdrop-blur-sm border-white/40">
+              <CardHeader className="flex flex-row items-center justify-between">
+                <CardTitle className="text-xl">Verification Requests</CardTitle>
+                <Button variant="ghost" size="sm">
+                  <History className="h-4 w-4" />
+                </Button>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  {verificationRequests.map((request) => (
+                    <div key={request.id} className="border-l-2 border-blue-200 pl-4 pb-4">
+                      <div className="flex items-start justify-between mb-1">
+                        <p className="text-sm font-medium text-slate-900">{request.requestor}</p>
+                        <Badge 
+                          variant="secondary"
+                          className={request.status === "approved" ? "bg-green-100 text-green-700 border-green-200" : "bg-orange-100 text-orange-700 border-orange-200"}
+                        >
+                          {request.status}
+                        </Badge>
+                      </div>
+                      <p className="text-xs text-slate-600 mb-1">{request.studentName}</p>
+                      <p className="text-xs text-slate-500 mb-1">{request.certificate}</p>
+                      <p className="text-xs text-slate-500">{request.purpose} • {request.date}</p>
+                    </div>
+                  ))}
+                </div>
+                <Button variant="outline" size="sm" className="w-full mt-4">
+                  View All Requests
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Quick Actions */}
+            <Card className="bg-white/70 backdrop-blur-sm border-white/40 mt-6">
+              <CardHeader>
+                <CardTitle className="text-xl">Quick Actions</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-3">
+                  <Button variant="outline" size="sm" className="w-full justify-start">
+                    <Plus className="mr-2 h-4 w-4" />
+                    Create New Certificate
+                  </Button>
+                  <Button variant="outline" size="sm" className="w-full justify-start">
+                    <Users className="mr-2 h-4 w-4" />
+                    Link Student Fayda ID
+                  </Button>
+                  <Button variant="outline" size="sm" className="w-full justify-start">
+                    <Shield className="mr-2 h-4 w-4" />
+                    Digital Signing Tool
+                  </Button>
+                  <Button variant="outline" size="sm" className="w-full justify-start">
+                    <TrendingUp className="mr-2 h-4 w-4" />
+                    View Analytics
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
