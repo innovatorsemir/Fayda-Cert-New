@@ -28,7 +28,7 @@ export default function Index() {
               <FileCheck className="h-6 w-6 text-white" />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-slate-900">Fayda</h1>
+              <h1 className="text-xl font-bold text-slate-900">FaydaCert</h1>
               <p className="text-xs text-slate-600">Certificate Verification</p>
             </div>
           </div>
