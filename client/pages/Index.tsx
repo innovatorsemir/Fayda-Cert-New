@@ -120,10 +120,10 @@ export default function Index() {
               <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <CheckCircle className="h-6 w-6 text-green-600" />
               </div>
-              <h3 className="font-semibold text-slate-900 mb-2">
+              <h3 className="font-semibold text-slate-900 dark:text-slate-100 mb-2">
                 Instant Verification
               </h3>
-              <p className="text-sm text-slate-600">
+              <p className="text-sm text-slate-600 dark:text-slate-300">
                 Real-time certificate authentication in seconds
               </p>
             </CardContent>
