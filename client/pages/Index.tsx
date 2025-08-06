@@ -20,7 +20,7 @@ import {
 
 export default function Index() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-blue-900 dark:to-indigo-900">
       {/* Header */}
       <header className="bg-white/80 backdrop-blur-md border-b border-white/20 sticky top-0 z-50">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
