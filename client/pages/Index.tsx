@@ -24,9 +24,11 @@ export default function Index() {
       <header className="bg-white/80 backdrop-blur-md border-b border-white/20 sticky top-0 z-50">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center">
-              <FileCheck className="h-6 w-6 text-white" />
-            </div>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F987903e727814500a3234fea1ca42e5a%2Fc87c10551bf74737a0acb97e7d337256?format=webp&width=800"
+              alt="FaydaCert Logo"
+              className="w-10 h-10 object-contain"
+            />
             <div>
               <h1 className="text-xl font-bold text-slate-900">FaydaCert</h1>
               <p className="text-xs text-slate-600">Certificate Verification</p>
