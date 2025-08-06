@@ -176,7 +176,7 @@ const App = () => (
 const container = document.getElementById("root")!;
 
 // Check if we're in development and if a root already exists
-let root: any;
+let root: Root;
 if (import.meta.hot) {
   // In development with HMR, store the root on the container
   if (!(container as any).__react_root) {
