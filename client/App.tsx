@@ -37,7 +37,7 @@ const App = () => (
           <Route path="/demo" element={<PlaceholderPage title="Demo" description="Interactive platform demonstration coming soon" />} />
           <Route path="/about" element={<PlaceholderPage title="About" description="Learn more about our platform and mission" />} />
           <Route path="/how-it-works" element={<PlaceholderPage title="How It Works" description="Detailed explanation of our verification process" />} />
-          <Route path="/contact" element={<PlaceholderPage title="Contact" description="Get in touch with our support team" />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/register" element={<PlaceholderPage title="Register Institution" description="Institution registration portal" />} />
           <Route path="/verify" element={<PlaceholderPage title="Verify Certificate" description="Quick certificate verification portal" />} />
           <Route path="/security" element={<PlaceholderPage title="Security" description="Information about our security measures" />} />
