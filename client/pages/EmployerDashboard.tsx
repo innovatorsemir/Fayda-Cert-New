@@ -5,14 +5,14 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { 
-  FileCheck, 
-  LogOut, 
-  Scan, 
-  CheckCircle, 
-  AlertCircle, 
-  Clock, 
-  Download, 
+import {
+  FileCheck,
+  LogOut,
+  Scan,
+  CheckCircle,
+  AlertCircle,
+  Clock,
+  Download,
   Settings,
   History,
   Shield,
@@ -22,7 +22,8 @@ import {
   Eye,
   FileText,
   QrCode,
-  Hash
+  Hash,
+  Lock
 } from "lucide-react";
 
 export default function EmployerDashboard() {
