@@ -27,7 +27,7 @@ export default function Index() {
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2F987903e727814500a3234fea1ca42e5a%2Fc87c10551bf74737a0acb97e7d337256?format=webp&width=800"
               alt="FaydaCert Logo"
-              className="w-10 h-10 object-contain"
+              className="w-10 h-10 object-contain rounded-full"
             />
             <div>
               <h1 className="text-xl font-bold text-slate-900">FaydaCert</h1>
