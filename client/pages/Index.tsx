@@ -413,8 +413,8 @@ export default function Index() {
             <Link to="/verify">
               <Button
                 size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-blue-600"
+                variant="secondary"
+                className="bg-white/20 text-white border-white hover:bg-white hover:text-blue-600"
               >
                 Verify a Certificate
               </Button>
