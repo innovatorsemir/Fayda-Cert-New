@@ -174,5 +174,18 @@ const App = () => (
 );
 
 const container = document.getElementById("root")!;
-const root = createRoot(container);
+
+// Check if we're in development and if a root already exists
+let root: any;
+if (import.meta.hot) {
+  // In development with HMR, store the root on the container
+  if (!(container as any).__react_root) {
+    (container as any).__react_root = createRoot(container);
+  }
+  root = (container as any).__react_root;
+} else {
+  // In production, create root normally
+  root = createRoot(container);
+}
+
 root.render(<App />);
