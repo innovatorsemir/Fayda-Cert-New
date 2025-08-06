@@ -105,6 +105,7 @@ export default function StudentDashboard() {
             <Button variant="ghost" size="sm">
               <Settings className="h-4 w-4" />
             </Button>
+            <ThemeToggle />
             <Link to="/login">
               <Button variant="outline" size="sm">
                 <LogOut className="mr-2 h-4 w-4" />
