@@ -115,7 +115,7 @@ export default function Index() {
           </p>
         </div>
         <div className="grid md:grid-cols-4 gap-6">
-          <Card className="bg-white/60 backdrop-blur-sm border-white/40 hover:bg-white/80 transition-all">
+          <Card className="bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm border-white/40 dark:border-slate-700/40 hover:bg-white/80 dark:hover:bg-slate-800/80 transition-all">
             <CardContent className="p-6 text-center">
               <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <CheckCircle className="h-6 w-6 text-green-600" />
