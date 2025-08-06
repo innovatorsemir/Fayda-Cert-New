@@ -13,6 +13,7 @@ import StudentDashboard from "./pages/StudentDashboard";
 import InstitutionDashboard from "./pages/InstitutionDashboard";
 import EmployerDashboard from "./pages/EmployerDashboard";
 import AdminDashboard from "./pages/AdminDashboard";
+import Contact from "./pages/Contact";
 import PlaceholderPage from "./pages/PlaceholderPage";
 
 const queryClient = new QueryClient();
