@@ -173,10 +173,10 @@ export default function Index() {
       {/* User Types */}
       <section className="container mx-auto px-6 py-16">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">
+          <h2 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-4">
             Built for Everyone
           </h2>
-          <p className="text-slate-600 max-w-2xl mx-auto">
+          <p className="text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
             Comprehensive solution serving all stakeholders in the certificate
             verification ecosystem
           </p>
