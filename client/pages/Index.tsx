@@ -31,7 +31,9 @@ export default function Index() {
               className="w-10 h-10 object-contain rounded-full"
             />
             <div>
-              <h1 className="text-xl font-bold text-slate-900 dark:text-slate-100">FaydaCert</h1>
+              <h1 className="text-xl font-bold text-slate-900 dark:text-slate-100">
+                FaydaCert
+              </h1>
               <p className="text-xs text-slate-600">Certificate Verification</p>
             </div>
           </div>
