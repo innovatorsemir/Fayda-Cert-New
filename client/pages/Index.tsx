@@ -414,7 +414,7 @@ export default function Index() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white/10"
+                className="border-white text-white hover:bg-white/10 hover:text-blue-600"
               >
                 Verify a Certificate
               </Button>
