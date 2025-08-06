@@ -29,27 +29,142 @@ const App = () => (
           <Route path="/login" element={<LoginPage />} />
           <Route path="/get-started" element={<LoginPage />} />
           <Route path="/student-dashboard" element={<StudentDashboard />} />
-          <Route path="/institution-dashboard" element={<InstitutionDashboard />} />
+          <Route
+            path="/institution-dashboard"
+            element={<InstitutionDashboard />}
+          />
           <Route path="/employer-dashboard" element={<EmployerDashboard />} />
           <Route path="/admin-dashboard" element={<AdminDashboard />} />
-          
+
           {/* Placeholder routes */}
-          <Route path="/demo" element={<PlaceholderPage title="Demo" description="Interactive platform demonstration coming soon" />} />
-          <Route path="/about" element={<PlaceholderPage title="About" description="Learn more about our platform and mission" />} />
-          <Route path="/how-it-works" element={<PlaceholderPage title="How It Works" description="Detailed explanation of our verification process" />} />
+          <Route
+            path="/demo"
+            element={
+              <PlaceholderPage
+                title="Demo"
+                description="Interactive platform demonstration coming soon"
+              />
+            }
+          />
+          <Route
+            path="/about"
+            element={
+              <PlaceholderPage
+                title="About"
+                description="Learn more about our platform and mission"
+              />
+            }
+          />
+          <Route
+            path="/how-it-works"
+            element={
+              <PlaceholderPage
+                title="How It Works"
+                description="Detailed explanation of our verification process"
+              />
+            }
+          />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/register" element={<PlaceholderPage title="Register Institution" description="Institution registration portal" />} />
-          <Route path="/verify" element={<PlaceholderPage title="Verify Certificate" description="Quick certificate verification portal" />} />
-          <Route path="/security" element={<PlaceholderPage title="Security" description="Information about our security measures" />} />
-          <Route path="/pricing" element={<PlaceholderPage title="Pricing" description="Pricing plans for institutions and employers" />} />
-          <Route path="/api" element={<PlaceholderPage title="API Documentation" description="Developer resources and API documentation" />} />
-          <Route path="/help" element={<PlaceholderPage title="Help Center" description="Frequently asked questions and support" />} />
-          <Route path="/status" element={<PlaceholderPage title="System Status" description="Real-time platform status and uptime" />} />
-          <Route path="/docs" element={<PlaceholderPage title="Documentation" description="User guides and technical documentation" />} />
-          <Route path="/privacy" element={<PlaceholderPage title="Privacy Policy" description="How we protect and handle your data" />} />
-          <Route path="/terms" element={<PlaceholderPage title="Terms of Service" description="Terms and conditions for platform usage" />} />
-          <Route path="/compliance" element={<PlaceholderPage title="Compliance" description="Regulatory compliance and certifications" />} />
-          
+          <Route
+            path="/register"
+            element={
+              <PlaceholderPage
+                title="Register Institution"
+                description="Institution registration portal"
+              />
+            }
+          />
+          <Route
+            path="/verify"
+            element={
+              <PlaceholderPage
+                title="Verify Certificate"
+                description="Quick certificate verification portal"
+              />
+            }
+          />
+          <Route
+            path="/security"
+            element={
+              <PlaceholderPage
+                title="Security"
+                description="Information about our security measures"
+              />
+            }
+          />
+          <Route
+            path="/pricing"
+            element={
+              <PlaceholderPage
+                title="Pricing"
+                description="Pricing plans for institutions and employers"
+              />
+            }
+          />
+          <Route
+            path="/api"
+            element={
+              <PlaceholderPage
+                title="API Documentation"
+                description="Developer resources and API documentation"
+              />
+            }
+          />
+          <Route
+            path="/help"
+            element={
+              <PlaceholderPage
+                title="Help Center"
+                description="Frequently asked questions and support"
+              />
+            }
+          />
+          <Route
+            path="/status"
+            element={
+              <PlaceholderPage
+                title="System Status"
+                description="Real-time platform status and uptime"
+              />
+            }
+          />
+          <Route
+            path="/docs"
+            element={
+              <PlaceholderPage
+                title="Documentation"
+                description="User guides and technical documentation"
+              />
+            }
+          />
+          <Route
+            path="/privacy"
+            element={
+              <PlaceholderPage
+                title="Privacy Policy"
+                description="How we protect and handle your data"
+              />
+            }
+          />
+          <Route
+            path="/terms"
+            element={
+              <PlaceholderPage
+                title="Terms of Service"
+                description="Terms and conditions for platform usage"
+              />
+            }
+          />
+          <Route
+            path="/compliance"
+            element={
+              <PlaceholderPage
+                title="Compliance"
+                description="Regulatory compliance and certifications"
+              />
+            }
+          />
+
           {/* Catch-all route must be last */}
           <Route path="*" element={<NotFound />} />
         </Routes>
