@@ -38,22 +38,23 @@ export default function Index() {
           <nav className="hidden md:flex items-center gap-6">
             <Link
               to="/about"
-              className="text-slate-600 hover:text-slate-900 transition-colors"
+              className="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-slate-100 transition-colors"
             >
               About
             </Link>
             <Link
               to="/how-it-works"
-              className="text-slate-600 hover:text-slate-900 transition-colors"
+              className="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-slate-100 transition-colors"
             >
               How it Works
             </Link>
             <Link
               to="/contact"
-              className="text-slate-600 hover:text-slate-900 transition-colors"
+              className="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-slate-100 transition-colors"
             >
               Contact
             </Link>
+            <ThemeToggle />
             <Link to="/login">
               <Button variant="outline" size="sm">
                 Sign In
