@@ -73,14 +73,14 @@ export default function Index() {
           >
             Blockchain-Secured Certificate Verification
           </Badge>
-          <h1 className="text-5xl font-bold text-slate-900 mb-6 leading-tight">
+          <h1 className="text-5xl font-bold text-slate-900 dark:text-slate-100 mb-6 leading-tight">
             Secure Academic Certificate
             <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
               {" "}
               Verification
             </span>
           </h1>
-          <p className="text-xl text-slate-600 mb-8 leading-relaxed">
+          <p className="text-xl text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
             A trusted platform connecting students, institutions, employers, and
             verifiers through blockchain-secured certificate authentication with
             Fayda ID integration.
