@@ -369,7 +369,7 @@ export default function AdminDashboard() {
           </div>
 
           {/* Quick Actions & Analytics */}
-          <div>
+          <div className="w-full min-w-0">
             <Card className="bg-white/70 backdrop-blur-sm border-white/40 mb-6">
               <CardHeader>
                 <CardTitle className="text-xl">Quick Actions</CardTitle>
