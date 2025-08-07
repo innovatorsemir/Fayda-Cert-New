@@ -428,7 +428,7 @@ export default function EmployerDashboard() {
           </div>
 
           {/* Quick Actions & Info */}
-          <div>
+          <div className="w-full min-w-0">
             <Card className="bg-white/70 backdrop-blur-sm border-white/40 mb-6">
               <CardHeader>
                 <CardTitle className="text-xl">Quick Actions</CardTitle>
