@@ -36,7 +36,7 @@ export function MobileNav({ navItems = defaultNavItems, showSignIn = true }: Mob
         <SheetContent side="right" className="w-80">
           <div className="flex flex-col h-full">
             <div className="py-4">
-              <h2 className="text-lg font-semibold">Navigation</h2>
+              <SheetTitle className="text-lg font-semibold">Navigation</SheetTitle>
             </div>
 
             <nav className="flex-1">
