@@ -42,7 +42,7 @@ export default function Index() {
           <p className="text-xl text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
             A trusted platform connecting students, institutions, employers, and
             verifiers through blockchain-secured certificate authentication with
-            Fayda ID integration.
+            FaydaCert ID integration.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/get-started">
