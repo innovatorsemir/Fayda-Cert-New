@@ -241,7 +241,7 @@ export default function Index() {
               <ul className="space-y-2 text-sm text-slate-600">
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-4 w-4 text-purple-500" />
-                  Scan Fayda ID for verification
+                  Scan FaydaCert ID for verification
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-4 w-4 text-purple-500" />
