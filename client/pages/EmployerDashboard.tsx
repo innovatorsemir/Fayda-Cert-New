@@ -300,7 +300,7 @@ export default function EmployerDashboard() {
                           <p className="font-medium">Sarah Johnson</p>
                         </div>
                         <div>
-                          <span className="text-slate-500">Fayda ID:</span>
+                          <span className="text-slate-500">FaydaCert ID:</span>
                           <p className="font-medium">FYD-2023-001234</p>
                         </div>
                         <div>
