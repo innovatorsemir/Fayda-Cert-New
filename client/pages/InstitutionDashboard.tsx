@@ -134,10 +134,10 @@ export default function InstitutionDashboard() {
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-2xl font-bold text-slate-900">
+                  <p className="text-2xl font-bold text-slate-900 dark:text-slate-100">
                     {certificates.filter((c) => c.status === "signed").length}
                   </p>
-                  <p className="text-sm text-slate-600">Digitally Signed</p>
+                  <p className="text-sm text-slate-600 dark:text-slate-400">Digitally Signed</p>
                 </div>
                 <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
                   <Shield className="h-6 w-6 text-green-600" />
