@@ -230,10 +230,10 @@ export default function EmployerDashboard() {
                       <Shield className="h-8 w-8 text-purple-600" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-slate-900 mb-2">
+                      <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-2">
                         OTP Verification Required
                       </h3>
-                      <p className="text-sm text-slate-600 mb-4">
+                      <p className="text-sm text-slate-600 dark:text-slate-300 mb-4">
                         We've sent an OTP to your registered phone number ending
                         in ****67
                       </p>
