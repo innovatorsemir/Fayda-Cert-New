@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 
 interface NavItem {
   label: string;
@@ -33,16 +33,13 @@ export function MobileNav({ navItems = defaultNavItems, showSignIn = true }: Mob
             <span className="sr-only">Toggle navigation menu</span>
           </Button>
         </SheetTrigger>
-        <SheetContent side="right" className="w-80 pr-0">
+        <SheetContent side="right" className="w-80">
           <div className="flex flex-col h-full">
-            <div className="flex items-center justify-between px-6 py-4 border-b">
-              <span className="text-lg font-semibold">Menu</span>
-              <Button variant="ghost" size="sm" onClick={() => setOpen(false)}>
-                <X className="h-4 w-4" />
-              </Button>
+            <div className="py-4">
+              <h2 className="text-lg font-semibold">Navigation</h2>
             </div>
-            
-            <nav className="flex-1 px-6 py-4">
+
+            <nav className="flex-1">
               <div className="space-y-4">
                 {navItems.map((item) => (
                   <Link
@@ -55,7 +52,7 @@ export function MobileNav({ navItems = defaultNavItems, showSignIn = true }: Mob
                   </Link>
                 ))}
               </div>
-              
+
               <div className="mt-8 pt-6 border-t space-y-4">
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-slate-600 dark:text-slate-300">
@@ -63,7 +60,7 @@ export function MobileNav({ navItems = defaultNavItems, showSignIn = true }: Mob
                   </span>
                   <ThemeToggle />
                 </div>
-                
+
                 {showSignIn && (
                   <Link to="/login" onClick={() => setOpen(false)}>
                     <Button variant="outline" className="w-full">
