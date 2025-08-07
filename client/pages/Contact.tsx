@@ -191,7 +191,7 @@ export default function Contact() {
                     </h3>
                     <ul className="space-y-1 text-sm text-slate-600">
                       <li>• Blockchain-secured certificate verification</li>
-                      <li>• Seamless Fayda ID integration</li>
+                      <li>• Seamless FaydaCert ID integration</li>
                       <li>• Real-time authentication in seconds</li>
                       <li>• Complete audit trail and transparency</li>
                       <li>• Multi-stakeholder ecosystem support</li>
