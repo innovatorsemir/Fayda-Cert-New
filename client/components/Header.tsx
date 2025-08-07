@@ -23,18 +23,18 @@ export function Header({
     <header
       className={`bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-white/20 dark:border-slate-700/20 sticky top-0 z-50 ${className}`}
     >
-      <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-3">
+      <div className="container mx-auto px-4 md:px-6 py-4 flex items-center justify-between">
+        <Link to="/" className="flex items-center gap-2 md:gap-3 min-w-0 flex-1">
           <img
             src="https://cdn.builder.io/api/v1/image/assets%2F987903e727814500a3234fea1ca42e5a%2Fc87c10551bf74737a0acb97e7d337256?format=webp&width=800"
             alt="FaydaCert Logo"
-            className="w-10 h-10 object-contain rounded-full"
+            className="w-8 h-8 md:w-10 md:h-10 object-contain rounded-full shrink-0"
           />
-          <div>
-            <h1 className="text-xl font-bold text-slate-900 dark:text-slate-100">
+          <div className="min-w-0">
+            <h1 className="text-lg md:text-xl font-bold text-slate-900 dark:text-slate-100 truncate">
               FaydaCert
             </h1>
-            <p className="text-xs text-slate-600 dark:text-slate-400">
+            <p className="text-xs text-slate-600 dark:text-slate-400 truncate">
               Certificate Verification
             </p>
           </div>
