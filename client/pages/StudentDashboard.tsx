@@ -245,7 +245,7 @@ export default function StudentDashboard() {
           </div>
 
           {/* Recent Activity */}
-          <div>
+          <div className="w-full min-w-0">
             <Card className="bg-white/70 backdrop-blur-sm border-white/40">
               <CardHeader className="flex flex-row items-center justify-between">
                 <CardTitle className="text-xl">Recent Activity</CardTitle>
