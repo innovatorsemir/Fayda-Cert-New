@@ -358,8 +358,8 @@ export default function Index() {
         <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-12 text-white">
           <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
           <p className="text-blue-100 mb-8 text-lg max-w-2xl mx-auto">
-            Join thousands of institutions and students already using FaydaCert for
-            secure certificate verification
+            Join thousands of institutions and students already using FaydaCert
+            for secure certificate verification
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/register">
