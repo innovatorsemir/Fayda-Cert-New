@@ -98,8 +98,8 @@ export default function InstitutionDashboard() {
         {/* Welcome Section */}
         <div className="mb-8 flex items-center justify-between">
           <div>
-            <h1 className="text-3xl font-bold text-slate-900 mb-2">Institution Dashboard</h1>
-            <p className="text-slate-600">Manage certificates and monitor verification requests</p>
+            <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-2">Institution Dashboard</h1>
+            <p className="text-slate-600 dark:text-slate-300">Manage certificates and monitor verification requests</p>
           </div>
           <Button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">
             <Plus className="mr-2 h-4 w-4" />
