@@ -96,7 +96,7 @@ export default function InstitutionDashboard() {
 
       <div className="container mx-auto px-4 md:px-6 py-8">
         {/* Welcome Section */}
-        <div className="mb-8 flex items-center justify-between">
+        <div className="mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
             <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-2">
               Institution Dashboard
@@ -105,7 +105,7 @@ export default function InstitutionDashboard() {
               Manage certificates and monitor verification requests
             </p>
           </div>
-          <Button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">
+          <Button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 w-full sm:w-auto">
             <Plus className="mr-2 h-4 w-4" />
             Issue New Certificate
           </Button>
