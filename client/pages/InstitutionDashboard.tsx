@@ -3,14 +3,14 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { DashboardHeader } from "@/components/DashboardHeader";
-import { 
-  FileCheck, 
-  LogOut, 
-  Upload, 
-  CheckCircle, 
-  AlertCircle, 
-  Clock, 
-  Users, 
+import {
+  FileCheck,
+  LogOut,
+  Upload,
+  CheckCircle,
+  AlertCircle,
+  Clock,
+  Users,
   Settings,
   History,
   Shield,
@@ -19,7 +19,7 @@ import {
   Calendar,
   Plus,
   Eye,
-  TrendingUp
+  TrendingUp,
 } from "lucide-react";
 
 export default function InstitutionDashboard() {
@@ -32,17 +32,17 @@ export default function InstitutionDashboard() {
       gpa: "3.85",
       issueDate: "2023-06-15",
       status: "signed",
-      verificationCount: 5
+      verificationCount: 5,
     },
     {
-      id: "cert-002", 
+      id: "cert-002",
       studentName: "Ahmed Hassan",
       faydaId: "FYD-2023-005678",
       program: "Master of Engineering",
       gpa: "3.92",
       issueDate: "2023-12-10",
       status: "pending_signature",
-      verificationCount: 0
+      verificationCount: 0,
     },
     {
       id: "cert-003",
@@ -52,8 +52,8 @@ export default function InstitutionDashboard() {
       gpa: "3.78",
       issueDate: "2024-01-20",
       status: "draft",
-      verificationCount: 0
-    }
+      verificationCount: 0,
+    },
   ];
 
   const verificationRequests = [
@@ -64,16 +64,16 @@ export default function InstitutionDashboard() {
       certificate: "Bachelor of Science in Computer Science",
       purpose: "Employment verification",
       date: "2024-01-15",
-      status: "approved"
+      status: "approved",
     },
     {
       id: 2,
       requestor: "Innovation Labs",
       studentName: "Ahmed Hassan",
-      certificate: "Master of Engineering", 
+      certificate: "Master of Engineering",
       purpose: "Job application",
       date: "2024-01-18",
-      status: "pending"
+      status: "pending",
     },
     {
       id: 3,
@@ -82,8 +82,8 @@ export default function InstitutionDashboard() {
       certificate: "Bachelor of Science in Computer Science",
       purpose: "Graduate admission",
       date: "2024-01-12",
-      status: "approved"
-    }
+      status: "approved",
+    },
   ];
 
   return (
@@ -98,8 +98,12 @@ export default function InstitutionDashboard() {
         {/* Welcome Section */}
         <div className="mb-8 flex items-center justify-between">
           <div>
-            <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-2">Institution Dashboard</h1>
-            <p className="text-slate-600 dark:text-slate-300">Manage certificates and monitor verification requests</p>
+            <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-2">
+              Institution Dashboard
+            </h1>
+            <p className="text-slate-600 dark:text-slate-300">
+              Manage certificates and monitor verification requests
+            </p>
           </div>
           <Button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">
             <Plus className="mr-2 h-4 w-4" />
@@ -113,7 +117,9 @@ export default function InstitutionDashboard() {
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-2xl font-bold text-slate-900">{certificates.length}</p>
+                  <p className="text-2xl font-bold text-slate-900">
+                    {certificates.length}
+                  </p>
                   <p className="text-sm text-slate-600">Total Certificates</p>
                 </div>
                 <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
@@ -127,7 +133,7 @@ export default function InstitutionDashboard() {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-2xl font-bold text-slate-900">
-                    {certificates.filter(c => c.status === "signed").length}
+                    {certificates.filter((c) => c.status === "signed").length}
                   </p>
                   <p className="text-sm text-slate-600">Digitally Signed</p>
                 </div>
@@ -142,7 +148,10 @@ export default function InstitutionDashboard() {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-2xl font-bold text-slate-900">
-                    {certificates.reduce((sum, cert) => sum + cert.verificationCount, 0)}
+                    {certificates.reduce(
+                      (sum, cert) => sum + cert.verificationCount,
+                      0,
+                    )}
                   </p>
                   <p className="text-sm text-slate-600">Total Verifications</p>
                 </div>
@@ -157,7 +166,10 @@ export default function InstitutionDashboard() {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-2xl font-bold text-slate-900">
-                    {verificationRequests.filter(r => r.status === "pending").length}
+                    {
+                      verificationRequests.filter((r) => r.status === "pending")
+                        .length
+                    }
                   </p>
                   <p className="text-sm text-slate-600">Pending Requests</p>
                 </div>
@@ -174,7 +186,9 @@ export default function InstitutionDashboard() {
           <div className="lg:col-span-2">
             <Card className="bg-white/70 backdrop-blur-sm border-white/40">
               <CardHeader className="flex flex-row items-center justify-between">
-                <CardTitle className="text-xl">Certificate Management</CardTitle>
+                <CardTitle className="text-xl">
+                  Certificate Management
+                </CardTitle>
                 <Button variant="outline" size="sm">
                   <Upload className="mr-2 h-4 w-4" />
                   Bulk Upload
@@ -183,12 +197,21 @@ export default function InstitutionDashboard() {
               <CardContent>
                 <div className="space-y-4">
                   {certificates.map((cert) => (
-                    <div key={cert.id} className="border border-slate-200 rounded-lg p-4 bg-white/50">
+                    <div
+                      key={cert.id}
+                      className="border border-slate-200 rounded-lg p-4 bg-white/50"
+                    >
                       <div className="flex items-start justify-between mb-3">
                         <div className="flex-1">
-                          <h3 className="font-semibold text-slate-900 mb-1">{cert.studentName}</h3>
-                          <p className="text-sm text-slate-600 mb-1">{cert.program}</p>
-                          <p className="text-xs text-slate-500 mb-2">Fayda ID: {cert.faydaId}</p>
+                          <h3 className="font-semibold text-slate-900 mb-1">
+                            {cert.studentName}
+                          </h3>
+                          <p className="text-sm text-slate-600 mb-1">
+                            {cert.program}
+                          </p>
+                          <p className="text-xs text-slate-500 mb-2">
+                            Fayda ID: {cert.faydaId}
+                          </p>
                           <div className="flex items-center gap-4 text-xs text-slate-500">
                             <span className="flex items-center gap-1">
                               <Calendar className="h-3 w-3" />
@@ -199,12 +222,14 @@ export default function InstitutionDashboard() {
                           </div>
                         </div>
                         <div className="flex items-center gap-2">
-                          <Badge 
+                          <Badge
                             variant="secondary"
                             className={
-                              cert.status === "signed" ? "bg-green-100 text-green-700 border-green-200" :
-                              cert.status === "pending_signature" ? "bg-orange-100 text-orange-700 border-orange-200" :
-                              "bg-gray-100 text-gray-700 border-gray-200"
+                              cert.status === "signed"
+                                ? "bg-green-100 text-green-700 border-green-200"
+                                : cert.status === "pending_signature"
+                                  ? "bg-orange-100 text-orange-700 border-orange-200"
+                                  : "bg-gray-100 text-gray-700 border-gray-200"
                             }
                           >
                             {cert.status === "signed" ? (
@@ -214,7 +239,11 @@ export default function InstitutionDashboard() {
                             ) : (
                               <AlertCircle className="mr-1 h-3 w-3" />
                             )}
-                            {cert.status.replace("_", " ").charAt(0).toUpperCase() + cert.status.replace("_", " ").slice(1)}
+                            {cert.status
+                              .replace("_", " ")
+                              .charAt(0)
+                              .toUpperCase() +
+                              cert.status.replace("_", " ").slice(1)}
                           </Badge>
                         </div>
                       </div>
@@ -230,7 +259,10 @@ export default function InstitutionDashboard() {
                           </Button>
                         )}
                         {cert.status === "pending_signature" && (
-                          <Button size="sm" className="bg-blue-600 hover:bg-blue-700 text-white">
+                          <Button
+                            size="sm"
+                            className="bg-blue-600 hover:bg-blue-700 text-white"
+                          >
                             <Shield className="mr-2 h-3 w-3" />
                             Sign Certificate
                           </Button>
@@ -255,19 +287,34 @@ export default function InstitutionDashboard() {
               <CardContent>
                 <div className="space-y-4">
                   {verificationRequests.map((request) => (
-                    <div key={request.id} className="border-l-2 border-blue-200 pl-4 pb-4">
+                    <div
+                      key={request.id}
+                      className="border-l-2 border-blue-200 pl-4 pb-4"
+                    >
                       <div className="flex items-start justify-between mb-1">
-                        <p className="text-sm font-medium text-slate-900">{request.requestor}</p>
-                        <Badge 
+                        <p className="text-sm font-medium text-slate-900">
+                          {request.requestor}
+                        </p>
+                        <Badge
                           variant="secondary"
-                          className={request.status === "approved" ? "bg-green-100 text-green-700 border-green-200" : "bg-orange-100 text-orange-700 border-orange-200"}
+                          className={
+                            request.status === "approved"
+                              ? "bg-green-100 text-green-700 border-green-200"
+                              : "bg-orange-100 text-orange-700 border-orange-200"
+                          }
                         >
                           {request.status}
                         </Badge>
                       </div>
-                      <p className="text-xs text-slate-600 mb-1">{request.studentName}</p>
-                      <p className="text-xs text-slate-500 mb-1">{request.certificate}</p>
-                      <p className="text-xs text-slate-500">{request.purpose} • {request.date}</p>
+                      <p className="text-xs text-slate-600 mb-1">
+                        {request.studentName}
+                      </p>
+                      <p className="text-xs text-slate-500 mb-1">
+                        {request.certificate}
+                      </p>
+                      <p className="text-xs text-slate-500">
+                        {request.purpose} • {request.date}
+                      </p>
                     </div>
                   ))}
                 </div>
@@ -284,19 +331,35 @@ export default function InstitutionDashboard() {
               </CardHeader>
               <CardContent>
                 <div className="space-y-3">
-                  <Button variant="outline" size="sm" className="w-full justify-start">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="w-full justify-start"
+                  >
                     <Plus className="mr-2 h-4 w-4" />
                     Create New Certificate
                   </Button>
-                  <Button variant="outline" size="sm" className="w-full justify-start">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="w-full justify-start"
+                  >
                     <Users className="mr-2 h-4 w-4" />
                     Link Student Fayda ID
                   </Button>
-                  <Button variant="outline" size="sm" className="w-full justify-start">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="w-full justify-start"
+                  >
                     <Shield className="mr-2 h-4 w-4" />
                     Digital Signing Tool
                   </Button>
-                  <Button variant="outline" size="sm" className="w-full justify-start">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="w-full justify-start"
+                  >
                     <TrendingUp className="mr-2 h-4 w-4" />
                     View Analytics
                   </Button>

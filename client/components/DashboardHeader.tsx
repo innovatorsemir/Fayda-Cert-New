@@ -2,15 +2,15 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { MobileNav } from "@/components/MobileNav";
-import { 
-  FileCheck, 
-  Bell, 
-  Settings, 
+import {
+  FileCheck,
+  Bell,
+  Settings,
   LogOut,
   GraduationCap,
   Building2,
   Briefcase,
-  Shield
+  Shield,
 } from "lucide-react";
 
 interface DashboardHeaderProps {
@@ -27,8 +27,8 @@ const userTypeConfig = {
       { label: "Dashboard", href: "/student-dashboard" },
       { label: "Certificates", href: "/student-dashboard#certificates" },
       { label: "Activity", href: "/student-dashboard#activity" },
-      { label: "Settings", href: "/student-dashboard#settings" }
-    ]
+      { label: "Settings", href: "/student-dashboard#settings" },
+    ],
   },
   institution: {
     icon: Building2,
@@ -37,8 +37,8 @@ const userTypeConfig = {
       { label: "Dashboard", href: "/institution-dashboard" },
       { label: "Certificates", href: "/institution-dashboard#certificates" },
       { label: "Students", href: "/institution-dashboard#students" },
-      { label: "Reports", href: "/institution-dashboard#reports" }
-    ]
+      { label: "Reports", href: "/institution-dashboard#reports" },
+    ],
   },
   employer: {
     icon: Briefcase,
@@ -47,8 +47,8 @@ const userTypeConfig = {
       { label: "Dashboard", href: "/employer-dashboard" },
       { label: "Verify", href: "/employer-dashboard#verify" },
       { label: "History", href: "/employer-dashboard#history" },
-      { label: "Reports", href: "/employer-dashboard#reports" }
-    ]
+      { label: "Reports", href: "/employer-dashboard#reports" },
+    ],
   },
   admin: {
     icon: Shield,
@@ -57,12 +57,16 @@ const userTypeConfig = {
       { label: "Dashboard", href: "/admin-dashboard" },
       { label: "Institutions", href: "/admin-dashboard#institutions" },
       { label: "Users", href: "/admin-dashboard#users" },
-      { label: "System", href: "/admin-dashboard#system" }
-    ]
-  }
+      { label: "System", href: "/admin-dashboard#system" },
+    ],
+  },
 };
 
-export function DashboardHeader({ userType, userName, portalName }: DashboardHeaderProps) {
+export function DashboardHeader({
+  userType,
+  userName,
+  portalName,
+}: DashboardHeaderProps) {
   const config = userTypeConfig[userType];
   const IconComponent = config.icon;
 
@@ -75,17 +79,23 @@ export function DashboardHeader({ userType, userName, portalName }: DashboardHea
               <FileCheck className="h-6 w-6 text-white" />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-slate-900 dark:text-slate-100">Fayda</h1>
-              <p className="text-xs text-slate-600 dark:text-slate-400">{portalName}</p>
+              <h1 className="text-xl font-bold text-slate-900 dark:text-slate-100">
+                Fayda
+              </h1>
+              <p className="text-xs text-slate-600 dark:text-slate-400">
+                {portalName}
+              </p>
             </div>
           </Link>
           <div className="h-6 w-px bg-slate-300 dark:bg-slate-600 hidden md:block"></div>
           <div className="hidden md:flex items-center gap-2">
             <IconComponent className={`h-5 w-5 ${config.color}`} />
-            <span className="font-medium text-slate-900 dark:text-slate-100">{userName}</span>
+            <span className="font-medium text-slate-900 dark:text-slate-100">
+              {userName}
+            </span>
           </div>
         </div>
-        
+
         <div className="flex items-center gap-3">
           <div className="hidden md:flex items-center gap-3">
             <Button variant="ghost" size="sm">
@@ -102,13 +112,13 @@ export function DashboardHeader({ userType, userName, portalName }: DashboardHea
               </Button>
             </Link>
           </div>
-          
+
           <div className="md:hidden">
-            <MobileNav 
+            <MobileNav
               navItems={[
                 ...config.navItems,
                 { label: "Home", href: "/" },
-                { label: "Settings", href: `/${userType}-dashboard#settings` }
+                { label: "Settings", href: `/${userType}-dashboard#settings` },
               ]}
               showSignIn={false}
             />

@@ -2,7 +2,12 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetTitle,
+} from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 
 interface NavItem {
@@ -18,10 +23,13 @@ interface MobileNavProps {
 const defaultNavItems: NavItem[] = [
   { label: "About", href: "/about" },
   { label: "How it Works", href: "/how-it-works" },
-  { label: "Contact", href: "/contact" }
+  { label: "Contact", href: "/contact" },
 ];
 
-export function MobileNav({ navItems = defaultNavItems, showSignIn = true }: MobileNavProps) {
+export function MobileNav({
+  navItems = defaultNavItems,
+  showSignIn = true,
+}: MobileNavProps) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -36,7 +44,9 @@ export function MobileNav({ navItems = defaultNavItems, showSignIn = true }: Mob
         <SheetContent side="right" className="w-80">
           <div className="flex flex-col h-full">
             <div className="py-4">
-              <SheetTitle className="text-lg font-semibold">Navigation</SheetTitle>
+              <SheetTitle className="text-lg font-semibold">
+                Navigation
+              </SheetTitle>
             </div>
 
             <nav className="flex-1">

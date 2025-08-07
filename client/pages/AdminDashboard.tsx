@@ -3,14 +3,14 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { DashboardHeader } from "@/components/DashboardHeader";
-import { 
-  FileCheck, 
-  LogOut, 
-  Users, 
-  CheckCircle, 
-  AlertTriangle, 
-  Clock, 
-  TrendingUp, 
+import {
+  FileCheck,
+  LogOut,
+  Users,
+  CheckCircle,
+  AlertTriangle,
+  Clock,
+  TrendingUp,
   Settings,
   History,
   Shield,
@@ -23,7 +23,7 @@ import {
   Eye,
   UserX,
   FileX,
-  Search
+  Search,
 } from "lucide-react";
 
 export default function AdminDashboard() {
@@ -35,16 +35,16 @@ export default function AdminDashboard() {
       registrationDate: "2024-01-15",
       documentsSubmitted: 8,
       status: "under_review",
-      verificationLevel: "pending"
+      verificationLevel: "pending",
     },
     {
-      id: "inst-002", 
+      id: "inst-002",
       name: "International Tech Academy",
       contactEmail: "registrar@ita.edu",
       registrationDate: "2024-01-12",
       documentsSubmitted: 12,
       status: "approved",
-      verificationLevel: "verified"
+      verificationLevel: "verified",
     },
     {
       id: "inst-003",
@@ -53,8 +53,8 @@ export default function AdminDashboard() {
       registrationDate: "2024-01-18",
       documentsSubmitted: 6,
       status: "requires_documents",
-      verificationLevel: "incomplete"
-    }
+      verificationLevel: "incomplete",
+    },
   ];
 
   const fraudAlerts = [
@@ -65,7 +65,7 @@ export default function AdminDashboard() {
       faydaId: "FYD-2024-999999",
       timestamp: "2024-01-15 14:30",
       severity: "high",
-      status: "investigating"
+      status: "investigating",
     },
     {
       id: "alert-002",
@@ -73,8 +73,8 @@ export default function AdminDashboard() {
       description: "Verification request for non-existent certificate",
       employerId: "EMP-2024-001",
       timestamp: "2024-01-14 09:15",
-      severity: "medium", 
-      status: "resolved"
+      severity: "medium",
+      status: "resolved",
     },
     {
       id: "alert-003",
@@ -83,8 +83,8 @@ export default function AdminDashboard() {
       institutionId: "INST-2024-055",
       timestamp: "2024-01-13 16:45",
       severity: "low",
-      status: "under_review"
-    }
+      status: "under_review",
+    },
   ];
 
   const platformStats = {
@@ -94,7 +94,7 @@ export default function AdminDashboard() {
     totalCertificates: 1205674,
     monthlyVerifications: 45623,
     activeDisputes: 12,
-    systemUptime: 99.97
+    systemUptime: 99.97,
   };
 
   return (
@@ -108,8 +108,12 @@ export default function AdminDashboard() {
       <div className="container mx-auto px-6 py-8">
         {/* Welcome Section */}
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-2">Platform Administration</h1>
-          <p className="text-slate-600 dark:text-slate-300">Monitor operations, manage users, and oversee platform security</p>
+          <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-2">
+            Platform Administration
+          </h1>
+          <p className="text-slate-600 dark:text-slate-300">
+            Monitor operations, manage users, and oversee platform security
+          </p>
         </div>
 
         {/* Platform Stats */}
@@ -118,7 +122,9 @@ export default function AdminDashboard() {
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-2xl font-bold text-slate-900">{platformStats.totalUsers.toLocaleString()}</p>
+                  <p className="text-2xl font-bold text-slate-900">
+                    {platformStats.totalUsers.toLocaleString()}
+                  </p>
                   <p className="text-sm text-slate-600">Total Users</p>
                 </div>
                 <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
@@ -131,8 +137,12 @@ export default function AdminDashboard() {
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-2xl font-bold text-slate-900">{platformStats.totalInstitutions}</p>
-                  <p className="text-sm text-slate-600">Verified Institutions</p>
+                  <p className="text-2xl font-bold text-slate-900">
+                    {platformStats.totalInstitutions}
+                  </p>
+                  <p className="text-sm text-slate-600">
+                    Verified Institutions
+                  </p>
                 </div>
                 <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
                   <Building2 className="h-6 w-6 text-green-600" />
@@ -144,7 +154,9 @@ export default function AdminDashboard() {
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-2xl font-bold text-slate-900">{platformStats.totalCertificates.toLocaleString()}</p>
+                  <p className="text-2xl font-bold text-slate-900">
+                    {platformStats.totalCertificates.toLocaleString()}
+                  </p>
                   <p className="text-sm text-slate-600">Total Certificates</p>
                 </div>
                 <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
@@ -157,7 +169,9 @@ export default function AdminDashboard() {
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-2xl font-bold text-slate-900">{platformStats.systemUptime}%</p>
+                  <p className="text-2xl font-bold text-slate-900">
+                    {platformStats.systemUptime}%
+                  </p>
                   <p className="text-sm text-slate-600">System Uptime</p>
                 </div>
                 <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
@@ -173,31 +187,55 @@ export default function AdminDashboard() {
           <div className="lg:col-span-2">
             <Card className="bg-white/70 backdrop-blur-sm border-white/40 mb-8">
               <CardHeader className="flex flex-row items-center justify-between">
-                <CardTitle className="text-xl">Institution Approval Queue</CardTitle>
-                <Badge variant="secondary" className="bg-orange-100 text-orange-700 border-orange-200">
-                  {pendingInstitutions.filter(i => i.status === "under_review").length} Pending
+                <CardTitle className="text-xl">
+                  Institution Approval Queue
+                </CardTitle>
+                <Badge
+                  variant="secondary"
+                  className="bg-orange-100 text-orange-700 border-orange-200"
+                >
+                  {
+                    pendingInstitutions.filter(
+                      (i) => i.status === "under_review",
+                    ).length
+                  }{" "}
+                  Pending
                 </Badge>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
                   {pendingInstitutions.map((institution) => (
-                    <div key={institution.id} className="border border-slate-200 rounded-lg p-4 bg-white/50">
+                    <div
+                      key={institution.id}
+                      className="border border-slate-200 rounded-lg p-4 bg-white/50"
+                    >
                       <div className="flex items-start justify-between mb-3">
                         <div className="flex-1">
-                          <h3 className="font-semibold text-slate-900 mb-1">{institution.name}</h3>
-                          <p className="text-sm text-slate-600 mb-1">{institution.contactEmail}</p>
+                          <h3 className="font-semibold text-slate-900 mb-1">
+                            {institution.name}
+                          </h3>
+                          <p className="text-sm text-slate-600 mb-1">
+                            {institution.contactEmail}
+                          </p>
                           <div className="flex items-center gap-4 text-xs text-slate-500">
-                            <span>Registered: {institution.registrationDate}</span>
-                            <span>{institution.documentsSubmitted} documents submitted</span>
+                            <span>
+                              Registered: {institution.registrationDate}
+                            </span>
+                            <span>
+                              {institution.documentsSubmitted} documents
+                              submitted
+                            </span>
                           </div>
                         </div>
                         <div className="flex items-center gap-2">
-                          <Badge 
+                          <Badge
                             variant="secondary"
                             className={
-                              institution.status === "approved" ? "bg-green-100 text-green-700 border-green-200" :
-                              institution.status === "under_review" ? "bg-orange-100 text-orange-700 border-orange-200" :
-                              "bg-gray-100 text-gray-700 border-gray-200"
+                              institution.status === "approved"
+                                ? "bg-green-100 text-green-700 border-green-200"
+                                : institution.status === "under_review"
+                                  ? "bg-orange-100 text-orange-700 border-orange-200"
+                                  : "bg-gray-100 text-gray-700 border-gray-200"
                             }
                           >
                             {institution.status === "approved" ? (
@@ -207,7 +245,11 @@ export default function AdminDashboard() {
                             ) : (
                               <AlertCircle className="mr-1 h-3 w-3" />
                             )}
-                            {institution.status.replace("_", " ").charAt(0).toUpperCase() + institution.status.replace("_", " ").slice(1)}
+                            {institution.status
+                              .replace("_", " ")
+                              .charAt(0)
+                              .toUpperCase() +
+                              institution.status.replace("_", " ").slice(1)}
                           </Badge>
                         </div>
                       </div>
@@ -218,7 +260,10 @@ export default function AdminDashboard() {
                         </Button>
                         {institution.status === "under_review" && (
                           <>
-                            <Button size="sm" className="bg-green-600 hover:bg-green-700 text-white">
+                            <Button
+                              size="sm"
+                              className="bg-green-600 hover:bg-green-700 text-white"
+                            >
                               <CheckCircle className="mr-2 h-3 w-3" />
                               Approve
                             </Button>
@@ -239,40 +284,60 @@ export default function AdminDashboard() {
             <Card className="bg-white/70 backdrop-blur-sm border-white/40">
               <CardHeader className="flex flex-row items-center justify-between">
                 <CardTitle className="text-xl">Security Alerts</CardTitle>
-                <Badge variant="destructive" className="bg-red-100 text-red-700 border-red-200">
-                  {fraudAlerts.filter(a => a.status === "investigating").length} Active
+                <Badge
+                  variant="destructive"
+                  className="bg-red-100 text-red-700 border-red-200"
+                >
+                  {
+                    fraudAlerts.filter((a) => a.status === "investigating")
+                      .length
+                  }{" "}
+                  Active
                 </Badge>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
                   {fraudAlerts.map((alert) => (
-                    <div key={alert.id} className="border border-slate-200 rounded-lg p-4 bg-white/50">
+                    <div
+                      key={alert.id}
+                      className="border border-slate-200 rounded-lg p-4 bg-white/50"
+                    >
                       <div className="flex items-start justify-between mb-3">
                         <div className="flex-1">
                           <div className="flex items-center gap-2 mb-2">
-                            <AlertTriangle className={`h-4 w-4 ${
-                              alert.severity === "high" ? "text-red-500" :
-                              alert.severity === "medium" ? "text-orange-500" :
-                              "text-yellow-500"
-                            }`} />
+                            <AlertTriangle
+                              className={`h-4 w-4 ${
+                                alert.severity === "high"
+                                  ? "text-red-500"
+                                  : alert.severity === "medium"
+                                    ? "text-orange-500"
+                                    : "text-yellow-500"
+                              }`}
+                            />
                             <span className="font-semibold text-slate-900 capitalize">
                               {alert.type.replace("_", " ")}
                             </span>
-                            <Badge 
+                            <Badge
                               variant="secondary"
                               className={
-                                alert.severity === "high" ? "bg-red-100 text-red-700 border-red-200" :
-                                alert.severity === "medium" ? "bg-orange-100 text-orange-700 border-orange-200" :
-                                "bg-yellow-100 text-yellow-700 border-yellow-200"
+                                alert.severity === "high"
+                                  ? "bg-red-100 text-red-700 border-red-200"
+                                  : alert.severity === "medium"
+                                    ? "bg-orange-100 text-orange-700 border-orange-200"
+                                    : "bg-yellow-100 text-yellow-700 border-yellow-200"
                               }
                             >
                               {alert.severity}
                             </Badge>
                           </div>
-                          <p className="text-sm text-slate-600 mb-2">{alert.description}</p>
+                          <p className="text-sm text-slate-600 mb-2">
+                            {alert.description}
+                          </p>
                           <div className="flex items-center gap-4 text-xs text-slate-500">
                             <span>{alert.timestamp}</span>
-                            <span className="capitalize">{alert.status.replace("_", " ")}</span>
+                            <span className="capitalize">
+                              {alert.status.replace("_", " ")}
+                            </span>
                           </div>
                         </div>
                       </div>
@@ -282,7 +347,10 @@ export default function AdminDashboard() {
                           Investigate
                         </Button>
                         {alert.status === "investigating" && (
-                          <Button size="sm" className="bg-blue-600 hover:bg-blue-700 text-white">
+                          <Button
+                            size="sm"
+                            className="bg-blue-600 hover:bg-blue-700 text-white"
+                          >
                             <CheckCircle className="mr-2 h-3 w-3" />
                             Mark Resolved
                           </Button>
@@ -303,23 +371,43 @@ export default function AdminDashboard() {
               </CardHeader>
               <CardContent>
                 <div className="space-y-3">
-                  <Button variant="outline" size="sm" className="w-full justify-start">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="w-full justify-start"
+                  >
                     <UserCheck className="mr-2 h-4 w-4" />
                     Review Pending Users
                   </Button>
-                  <Button variant="outline" size="sm" className="w-full justify-start">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="w-full justify-start"
+                  >
                     <Building2 className="mr-2 h-4 w-4" />
                     Manage Institutions
                   </Button>
-                  <Button variant="outline" size="sm" className="w-full justify-start">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="w-full justify-start"
+                  >
                     <BarChart3 className="mr-2 h-4 w-4" />
                     Generate Analytics
                   </Button>
-                  <Button variant="outline" size="sm" className="w-full justify-start">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="w-full justify-start"
+                  >
                     <Search className="mr-2 h-4 w-4" />
                     Advanced Search
                   </Button>
-                  <Button variant="outline" size="sm" className="w-full justify-start">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="w-full justify-start"
+                  >
                     <Settings className="mr-2 h-4 w-4" />
                     Platform Settings
                   </Button>
@@ -334,11 +422,17 @@ export default function AdminDashboard() {
               <CardContent>
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-slate-600">Verifications</span>
-                    <span className="font-semibold text-slate-900">{platformStats.monthlyVerifications.toLocaleString()}</span>
+                    <span className="text-sm text-slate-600">
+                      Verifications
+                    </span>
+                    <span className="font-semibold text-slate-900">
+                      {platformStats.monthlyVerifications.toLocaleString()}
+                    </span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-slate-600">New Certificates</span>
+                    <span className="text-sm text-slate-600">
+                      New Certificates
+                    </span>
                     <span className="font-semibold text-slate-900">8,247</span>
                   </div>
                   <div className="flex items-center justify-between">
@@ -346,13 +440,19 @@ export default function AdminDashboard() {
                     <span className="font-semibold text-slate-900">1,532</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-slate-600">Active Disputes</span>
-                    <span className="font-semibold text-slate-900">{platformStats.activeDisputes}</span>
+                    <span className="text-sm text-slate-600">
+                      Active Disputes
+                    </span>
+                    <span className="font-semibold text-slate-900">
+                      {platformStats.activeDisputes}
+                    </span>
                   </div>
                   <div className="pt-2 border-t border-slate-200">
                     <div className="flex items-center gap-2">
                       <TrendingUp className="h-4 w-4 text-green-600" />
-                      <span className="text-sm text-green-600 font-medium">+15% from last month</span>
+                      <span className="text-sm text-green-600 font-medium">
+                        +15% from last month
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -366,31 +466,50 @@ export default function AdminDashboard() {
               <CardContent>
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-slate-600">API Response Time</span>
-                    <Badge variant="secondary" className="bg-green-100 text-green-700 border-green-200">
+                    <span className="text-sm text-slate-600">
+                      API Response Time
+                    </span>
+                    <Badge
+                      variant="secondary"
+                      className="bg-green-100 text-green-700 border-green-200"
+                    >
                       <CheckCircle className="mr-1 h-3 w-3" />
                       85ms
                     </Badge>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-slate-600">Database Status</span>
-                    <Badge variant="secondary" className="bg-green-100 text-green-700 border-green-200">
+                    <span className="text-sm text-slate-600">
+                      Database Status
+                    </span>
+                    <Badge
+                      variant="secondary"
+                      className="bg-green-100 text-green-700 border-green-200"
+                    >
                       <CheckCircle className="mr-1 h-3 w-3" />
                       Healthy
                     </Badge>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-slate-600">Blockchain Sync</span>
-                    <Badge variant="secondary" className="bg-green-100 text-green-700 border-green-200">
+                    <span className="text-sm text-slate-600">
+                      Blockchain Sync
+                    </span>
+                    <Badge
+                      variant="secondary"
+                      className="bg-green-100 text-green-700 border-green-200"
+                    >
                       <CheckCircle className="mr-1 h-3 w-3" />
                       Synced
                     </Badge>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-slate-600">Security Alerts</span>
-                    <Badge variant="secondary" className="bg-orange-100 text-orange-700 border-orange-200">
-                      <AlertTriangle className="mr-1 h-3 w-3" />
-                      3 Active
+                    <span className="text-sm text-slate-600">
+                      Security Alerts
+                    </span>
+                    <Badge
+                      variant="secondary"
+                      className="bg-orange-100 text-orange-700 border-orange-200"
+                    >
+                      <AlertTriangle className="mr-1 h-3 w-3" />3 Active
                     </Badge>
                   </div>
                 </div>

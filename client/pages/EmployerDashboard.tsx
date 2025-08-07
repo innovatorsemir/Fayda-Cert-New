@@ -24,13 +24,15 @@ import {
   FileText,
   QrCode,
   Hash,
-  Lock
+  Lock,
 } from "lucide-react";
 
 export default function EmployerDashboard() {
   const [faydaId, setFaydaId] = useState("");
   const [otpCode, setOtpCode] = useState("");
-  const [verificationStep, setVerificationStep] = useState<"input" | "otp" | "result">("input");
+  const [verificationStep, setVerificationStep] = useState<
+    "input" | "otp" | "result"
+  >("input");
 
   const verificationHistory = [
     {
@@ -42,30 +44,32 @@ export default function EmployerDashboard() {
       verificationDate: "2024-01-15",
       purpose: "Employment verification",
       status: "verified",
-      blockchainHash: "0x7d865e959b2466918c9863afca942d0fb89d7c9ac0c99bafc3749504ded97730"
+      blockchainHash:
+        "0x7d865e959b2466918c9863afca942d0fb89d7c9ac0c99bafc3749504ded97730",
     },
     {
-      id: "ver-002", 
+      id: "ver-002",
       candidateName: "Ahmed Hassan",
-      faydaId: "FYD-2023-005678", 
+      faydaId: "FYD-2023-005678",
       certificate: "Master of Engineering",
       institution: "Tech Institute",
       verificationDate: "2024-01-12",
       purpose: "Job application review",
       status: "verified",
-      blockchainHash: "0x2a865e959b2466918c9863afca942d0fb89d7c9ac0c99bafc3749504ded97730"
+      blockchainHash:
+        "0x2a865e959b2466918c9863afca942d0fb89d7c9ac0c99bafc3749504ded97730",
     },
     {
       id: "ver-003",
       candidateName: "Maria Rodriguez",
       faydaId: "FYD-2024-001122",
-      certificate: "Bachelor of Arts in Design", 
+      certificate: "Bachelor of Arts in Design",
       institution: "Design Academy",
       verificationDate: "2024-01-10",
       purpose: "Contract position verification",
       status: "pending_consent",
-      blockchainHash: null
-    }
+      blockchainHash: null,
+    },
   ];
 
   const handleVerification = (e: React.FormEvent) => {
@@ -94,8 +98,12 @@ export default function EmployerDashboard() {
       <div className="container mx-auto px-6 py-8">
         {/* Welcome Section */}
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-2">Employer Dashboard</h1>
-          <p className="text-slate-600 dark:text-slate-300">Verify candidate credentials securely and instantly</p>
+          <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-2">
+            Employer Dashboard
+          </h1>
+          <p className="text-slate-600 dark:text-slate-300">
+            Verify candidate credentials securely and instantly
+          </p>
         </div>
 
         {/* Stats Cards */}
@@ -104,7 +112,9 @@ export default function EmployerDashboard() {
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-2xl font-bold text-slate-900">{verificationHistory.length}</p>
+                  <p className="text-2xl font-bold text-slate-900">
+                    {verificationHistory.length}
+                  </p>
                   <p className="text-sm text-slate-600">Total Verifications</p>
                 </div>
                 <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
@@ -118,7 +128,10 @@ export default function EmployerDashboard() {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-2xl font-bold text-slate-900">
-                    {verificationHistory.filter(v => v.status === "verified").length}
+                    {
+                      verificationHistory.filter((v) => v.status === "verified")
+                        .length
+                    }
                   </p>
                   <p className="text-sm text-slate-600">Verified</p>
                 </div>
@@ -133,7 +146,11 @@ export default function EmployerDashboard() {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-2xl font-bold text-slate-900">
-                    {verificationHistory.filter(v => v.status === "pending_consent").length}
+                    {
+                      verificationHistory.filter(
+                        (v) => v.status === "pending_consent",
+                      ).length
+                    }
                   </p>
                   <p className="text-sm text-slate-600">Pending Consent</p>
                 </div>
@@ -195,7 +212,10 @@ export default function EmployerDashboard() {
                         required
                       />
                     </div>
-                    <Button type="submit" className="w-full bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-700 hover:to-violet-700">
+                    <Button
+                      type="submit"
+                      className="w-full bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-700 hover:to-violet-700"
+                    >
                       <Search className="mr-2 h-4 w-4" />
                       Request Verification
                     </Button>
@@ -208,9 +228,12 @@ export default function EmployerDashboard() {
                       <Shield className="h-8 w-8 text-purple-600" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-slate-900 mb-2">OTP Verification Required</h3>
+                      <h3 className="text-lg font-semibold text-slate-900 mb-2">
+                        OTP Verification Required
+                      </h3>
                       <p className="text-sm text-slate-600 mb-4">
-                        We've sent an OTP to your registered phone number ending in ****67
+                        We've sent an OTP to your registered phone number ending
+                        in ****67
                       </p>
                     </div>
                     <form onSubmit={handleVerification} className="space-y-4">
@@ -227,10 +250,18 @@ export default function EmployerDashboard() {
                         />
                       </div>
                       <div className="flex gap-2">
-                        <Button type="button" variant="outline" onClick={resetVerification} className="flex-1">
+                        <Button
+                          type="button"
+                          variant="outline"
+                          onClick={resetVerification}
+                          className="flex-1"
+                        >
                           Cancel
                         </Button>
-                        <Button type="submit" className="flex-1 bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-700 hover:to-violet-700">
+                        <Button
+                          type="submit"
+                          className="flex-1 bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-700 hover:to-violet-700"
+                        >
                           Verify OTP
                         </Button>
                       </div>
@@ -244,10 +275,14 @@ export default function EmployerDashboard() {
                       <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
                         <CheckCircle className="h-8 w-8 text-green-600" />
                       </div>
-                      <h3 className="text-lg font-semibold text-slate-900 mb-2">Certificate Verified Successfully</h3>
-                      <p className="text-sm text-slate-600">Student has granted consent for this verification</p>
+                      <h3 className="text-lg font-semibold text-slate-900 mb-2">
+                        Certificate Verified Successfully
+                      </h3>
+                      <p className="text-sm text-slate-600">
+                        Student has granted consent for this verification
+                      </p>
                     </div>
-                    
+
                     <div className="bg-white/60 rounded-lg p-4 space-y-3">
                       <div className="grid grid-cols-2 gap-4 text-sm">
                         <div>
@@ -260,11 +295,15 @@ export default function EmployerDashboard() {
                         </div>
                         <div>
                           <span className="text-slate-500">Certificate:</span>
-                          <p className="font-medium">Bachelor of Science in Computer Science</p>
+                          <p className="font-medium">
+                            Bachelor of Science in Computer Science
+                          </p>
                         </div>
                         <div>
                           <span className="text-slate-500">Institution:</span>
-                          <p className="font-medium">University of Technology</p>
+                          <p className="font-medium">
+                            University of Technology
+                          </p>
                         </div>
                         <div>
                           <span className="text-slate-500">Issue Date:</span>
@@ -276,7 +315,9 @@ export default function EmployerDashboard() {
                         </div>
                       </div>
                       <div className="pt-2 border-t border-slate-200">
-                        <span className="text-slate-500 text-sm">Blockchain Hash:</span>
+                        <span className="text-slate-500 text-sm">
+                          Blockchain Hash:
+                        </span>
                         <p className="font-mono text-xs text-slate-700 break-all flex items-center gap-2">
                           <Hash className="h-3 w-3" />
                           0x7d865e959b2466918c9863afca942d0fb89d7c9ac0c99bafc3749504ded97730
@@ -285,7 +326,11 @@ export default function EmployerDashboard() {
                     </div>
 
                     <div className="flex gap-2">
-                      <Button variant="outline" onClick={resetVerification} className="flex-1">
+                      <Button
+                        variant="outline"
+                        onClick={resetVerification}
+                        className="flex-1"
+                      >
                         New Verification
                       </Button>
                       <Button className="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">
@@ -310,28 +355,47 @@ export default function EmployerDashboard() {
               <CardContent>
                 <div className="space-y-4">
                   {verificationHistory.map((verification) => (
-                    <div key={verification.id} className="border border-slate-200 rounded-lg p-4 bg-white/50">
+                    <div
+                      key={verification.id}
+                      className="border border-slate-200 rounded-lg p-4 bg-white/50"
+                    >
                       <div className="flex items-start justify-between mb-3">
                         <div className="flex-1">
-                          <h3 className="font-semibold text-slate-900 mb-1">{verification.candidateName}</h3>
-                          <p className="text-sm text-slate-600 mb-1">{verification.certificate}</p>
-                          <p className="text-xs text-slate-500 mb-2">{verification.institution}</p>
+                          <h3 className="font-semibold text-slate-900 mb-1">
+                            {verification.candidateName}
+                          </h3>
+                          <p className="text-sm text-slate-600 mb-1">
+                            {verification.certificate}
+                          </p>
+                          <p className="text-xs text-slate-500 mb-2">
+                            {verification.institution}
+                          </p>
                           <div className="flex items-center gap-4 text-xs text-slate-500">
-                            <span>Verified: {verification.verificationDate}</span>
+                            <span>
+                              Verified: {verification.verificationDate}
+                            </span>
                             <span>Purpose: {verification.purpose}</span>
                           </div>
                         </div>
                         <div className="flex items-center gap-2">
-                          <Badge 
+                          <Badge
                             variant="secondary"
-                            className={verification.status === "verified" ? "bg-green-100 text-green-700 border-green-200" : "bg-orange-100 text-orange-700 border-orange-200"}
+                            className={
+                              verification.status === "verified"
+                                ? "bg-green-100 text-green-700 border-green-200"
+                                : "bg-orange-100 text-orange-700 border-orange-200"
+                            }
                           >
                             {verification.status === "verified" ? (
                               <CheckCircle className="mr-1 h-3 w-3" />
                             ) : (
                               <Clock className="mr-1 h-3 w-3" />
                             )}
-                            {verification.status.replace("_", " ").charAt(0).toUpperCase() + verification.status.replace("_", " ").slice(1)}
+                            {verification.status
+                              .replace("_", " ")
+                              .charAt(0)
+                              .toUpperCase() +
+                              verification.status.replace("_", " ").slice(1)}
                           </Badge>
                         </div>
                       </div>
@@ -366,19 +430,35 @@ export default function EmployerDashboard() {
               </CardHeader>
               <CardContent>
                 <div className="space-y-3">
-                  <Button variant="outline" size="sm" className="w-full justify-start">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="w-full justify-start"
+                  >
                     <Scan className="mr-2 h-4 w-4" />
                     Quick Scan QR Code
                   </Button>
-                  <Button variant="outline" size="sm" className="w-full justify-start">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="w-full justify-start"
+                  >
                     <Search className="mr-2 h-4 w-4" />
                     Bulk Verification
                   </Button>
-                  <Button variant="outline" size="sm" className="w-full justify-start">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="w-full justify-start"
+                  >
                     <FileText className="mr-2 h-4 w-4" />
                     Generate Report
                   </Button>
-                  <Button variant="outline" size="sm" className="w-full justify-start">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="w-full justify-start"
+                  >
                     <Settings className="mr-2 h-4 w-4" />
                     Verification Settings
                   </Button>
@@ -395,22 +475,34 @@ export default function EmployerDashboard() {
                   <div className="flex items-start gap-3">
                     <Shield className="h-4 w-4 text-green-600 mt-0.5" />
                     <div>
-                      <p className="font-medium text-slate-900">Blockchain Verified</p>
-                      <p className="text-xs text-slate-600">All certificates are cryptographically secured</p>
+                      <p className="font-medium text-slate-900">
+                        Blockchain Verified
+                      </p>
+                      <p className="text-xs text-slate-600">
+                        All certificates are cryptographically secured
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <Lock className="h-4 w-4 text-blue-600 mt-0.5" />
                     <div>
-                      <p className="font-medium text-slate-900">OTP Authentication</p>
-                      <p className="text-xs text-slate-600">Two-factor verification for secure access</p>
+                      <p className="font-medium text-slate-900">
+                        OTP Authentication
+                      </p>
+                      <p className="text-xs text-slate-600">
+                        Two-factor verification for secure access
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="h-4 w-4 text-purple-600 mt-0.5" />
                     <div>
-                      <p className="font-medium text-slate-900">Student Consent</p>
-                      <p className="text-xs text-slate-600">Access only with explicit student permission</p>
+                      <p className="font-medium text-slate-900">
+                        Student Consent
+                      </p>
+                      <p className="text-xs text-slate-600">
+                        Access only with explicit student permission
+                      </p>
                     </div>
                   </div>
                 </div>
