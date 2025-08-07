@@ -249,24 +249,27 @@ export default function InstitutionDashboard() {
                           </Badge>
                         </div>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <Button size="sm" variant="outline">
-                          <Eye className="mr-2 h-3 w-3" />
-                          View Details
+                      <div className="flex flex-wrap items-center gap-2">
+                        <Button size="sm" variant="outline" className="flex-1 min-w-fit">
+                          <Eye className="mr-1 h-3 w-3" />
+                          <span className="hidden sm:inline">View Details</span>
+                          <span className="sm:hidden">View</span>
                         </Button>
                         {cert.status === "draft" && (
-                          <Button size="sm" variant="outline">
-                            <Upload className="mr-2 h-3 w-3" />
-                            Upload
+                          <Button size="sm" variant="outline" className="flex-1 min-w-fit">
+                            <Upload className="mr-1 h-3 w-3" />
+                            <span className="hidden sm:inline">Upload</span>
+                            <span className="sm:hidden">Upload</span>
                           </Button>
                         )}
                         {cert.status === "pending_signature" && (
                           <Button
                             size="sm"
-                            className="bg-blue-600 hover:bg-blue-700 text-white"
+                            className="bg-blue-600 hover:bg-blue-700 text-white flex-1 min-w-fit"
                           >
-                            <Shield className="mr-2 h-3 w-3" />
-                            Sign Certificate
+                            <Shield className="mr-1 h-3 w-3" />
+                            <span className="hidden sm:inline">Sign Certificate</span>
+                            <span className="sm:hidden">Sign</span>
                           </Button>
                         )}
                       </div>
