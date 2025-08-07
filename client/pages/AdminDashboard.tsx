@@ -345,18 +345,19 @@ export default function AdminDashboard() {
                           </div>
                         </div>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <Button size="sm" variant="outline">
+                      <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+                        <Button size="sm" variant="outline" className="w-full sm:w-auto">
                           <Eye className="mr-2 h-3 w-3" />
                           Investigate
                         </Button>
                         {alert.status === "investigating" && (
                           <Button
                             size="sm"
-                            className="bg-blue-600 hover:bg-blue-700 text-white"
+                            className="bg-blue-600 hover:bg-blue-700 text-white w-full sm:w-auto"
                           >
                             <CheckCircle className="mr-2 h-3 w-3" />
-                            Mark Resolved
+                            <span className="hidden sm:inline">Mark Resolved</span>
+                            <span className="sm:hidden">Resolve</span>
                           </Button>
                         )}
                       </div>
