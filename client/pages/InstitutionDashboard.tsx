@@ -205,13 +205,13 @@ export default function InstitutionDashboard() {
                     >
                       <div className="flex items-start justify-between mb-3">
                         <div className="flex-1">
-                          <h3 className="font-semibold text-slate-900 mb-1">
+                          <h3 className="font-semibold text-slate-900 dark:text-slate-100 mb-1">
                             {cert.studentName}
                           </h3>
-                          <p className="text-sm text-slate-600 mb-1">
+                          <p className="text-sm text-slate-600 dark:text-slate-300 mb-1">
                             {cert.program}
                           </p>
-                          <p className="text-xs text-slate-500 mb-2">
+                          <p className="text-xs text-slate-500 dark:text-slate-400 mb-2">
                             Fayda ID: {cert.faydaId}
                           </p>
                           <div className="flex items-center gap-4 text-xs text-slate-500">
