@@ -114,13 +114,14 @@ export function DashboardHeader({
           </div>
 
           <div className="md:hidden">
-            <MobileNav
+            <DashboardMobileNav
               navItems={[
                 ...config.navItems,
                 { label: "Home", href: "/" },
-                { label: "Settings", href: `/${userType}-dashboard#settings` },
               ]}
-              showSignIn={false}
+              userName={userName}
+              userIcon={IconComponent}
+              userIconColor={config.color}
             />
           </div>
         </div>
