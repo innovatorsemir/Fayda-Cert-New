@@ -214,7 +214,7 @@ export default function InstitutionDashboard() {
                             {cert.program}
                           </p>
                           <p className="text-xs text-slate-500 dark:text-slate-400 mb-2">
-                            Fayda ID: {cert.faydaId}
+                            FaydaCert ID: {cert.faydaId}
                           </p>
                           <div className="flex items-center gap-4 text-xs text-slate-500">
                             <span className="flex items-center gap-1">
