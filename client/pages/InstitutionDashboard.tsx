@@ -181,7 +181,7 @@ export default function InstitutionDashboard() {
           </Card>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-6 md:gap-8">
           {/* Certificate Management */}
           <div className="lg:col-span-2">
             <Card className="bg-white/70 backdrop-blur-sm border-white/40">
