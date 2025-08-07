@@ -139,10 +139,10 @@ export default function AdminDashboard() {
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-2xl font-bold text-slate-900">
+                  <p className="text-2xl font-bold text-slate-900 dark:text-slate-100">
                     {platformStats.totalInstitutions}
                   </p>
-                  <p className="text-sm text-slate-600">
+                  <p className="text-sm text-slate-600 dark:text-slate-400">
                     Verified Institutions
                   </p>
                 </div>
