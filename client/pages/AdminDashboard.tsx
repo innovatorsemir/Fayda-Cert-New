@@ -255,25 +255,27 @@ export default function AdminDashboard() {
                           </Badge>
                         </div>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <Button size="sm" variant="outline">
+                      <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+                        <Button size="sm" variant="outline" className="w-full sm:w-auto">
                           <Eye className="mr-2 h-3 w-3" />
                           Review Documents
                         </Button>
                         {institution.status === "under_review" && (
-                          <>
+                          <div className="flex gap-2 w-full sm:w-auto">
                             <Button
                               size="sm"
-                              className="bg-green-600 hover:bg-green-700 text-white"
+                              className="bg-green-600 hover:bg-green-700 text-white flex-1 sm:flex-none"
                             >
-                              <CheckCircle className="mr-2 h-3 w-3" />
-                              Approve
+                              <CheckCircle className="mr-1 h-3 w-3" />
+                              <span className="hidden sm:inline">Approve</span>
+                              <span className="sm:hidden">✓</span>
                             </Button>
-                            <Button size="sm" variant="destructive">
-                              <UserX className="mr-2 h-3 w-3" />
-                              Reject
+                            <Button size="sm" variant="destructive" className="flex-1 sm:flex-none">
+                              <UserX className="mr-1 h-3 w-3" />
+                              <span className="hidden sm:inline">Reject</span>
+                              <span className="sm:hidden">✗</span>
                             </Button>
-                          </>
+                          </div>
                         )}
                       </div>
                     </div>
