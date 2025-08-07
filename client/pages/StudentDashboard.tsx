@@ -163,9 +163,9 @@ export default function StudentDashboard() {
           </Card>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
           {/* My Certificates */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 w-full min-w-0">
             <Card className="bg-white/70 backdrop-blur-sm border-white/40">
               <CardHeader className="flex flex-row items-center justify-between">
                 <CardTitle className="text-xl">My Certificates</CardTitle>
