@@ -105,7 +105,7 @@ export default function AdminDashboard() {
         portalName="Admin Portal"
       />
 
-      <div className="container mx-auto px-4 md:px-6 py-8">
+      <div className="container mx-auto px-4 md:px-6 py-8 max-w-7xl overflow-x-hidden">
         {/* Welcome Section */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-2">
