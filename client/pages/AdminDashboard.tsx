@@ -118,7 +118,7 @@ export default function AdminDashboard() {
 
         {/* Platform Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-8">
-          <Card className="bg-white/70 backdrop-blur-sm border-white/40">
+          <Card className="bg-white/70 dark:bg-slate-800/70 backdrop-blur-sm border-white/40 dark:border-slate-700/40">
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
@@ -135,7 +135,7 @@ export default function AdminDashboard() {
               </div>
             </CardContent>
           </Card>
-          <Card className="bg-white/70 backdrop-blur-sm border-white/40">
+          <Card className="bg-white/70 dark:bg-slate-800/70 backdrop-blur-sm border-white/40 dark:border-slate-700/40">
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
@@ -152,7 +152,7 @@ export default function AdminDashboard() {
               </div>
             </CardContent>
           </Card>
-          <Card className="bg-white/70 backdrop-blur-sm border-white/40">
+          <Card className="bg-white/70 dark:bg-slate-800/70 backdrop-blur-sm border-white/40 dark:border-slate-700/40">
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
@@ -167,7 +167,7 @@ export default function AdminDashboard() {
               </div>
             </CardContent>
           </Card>
-          <Card className="bg-white/70 backdrop-blur-sm border-white/40">
+          <Card className="bg-white/70 dark:bg-slate-800/70 backdrop-blur-sm border-white/40 dark:border-slate-700/40">
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
@@ -283,7 +283,7 @@ export default function AdminDashboard() {
             </Card>
 
             {/* Fraud Alerts */}
-            <Card className="bg-white/70 backdrop-blur-sm border-white/40">
+            <Card className="bg-white/70 dark:bg-slate-800/70 backdrop-blur-sm border-white/40 dark:border-slate-700/40">
               <CardHeader className="flex flex-row items-center justify-between">
                 <CardTitle className="text-xl">Security Alerts</CardTitle>
                 <Badge
@@ -461,7 +461,7 @@ export default function AdminDashboard() {
               </CardContent>
             </Card>
 
-            <Card className="bg-white/70 backdrop-blur-sm border-white/40">
+            <Card className="bg-white/70 dark:bg-slate-800/70 backdrop-blur-sm border-white/40 dark:border-slate-700/40">
               <CardHeader>
                 <CardTitle className="text-xl">System Health</CardTitle>
               </CardHeader>
