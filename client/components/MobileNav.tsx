@@ -41,21 +41,21 @@ export function MobileNav({
             <span className="sr-only">Toggle navigation menu</span>
           </Button>
         </SheetTrigger>
-        <SheetContent side="right" className="w-80">
+        <SheetContent side="right" className="w-80 sm:w-96 px-0">
           <div className="flex flex-col h-full">
-            <div className="py-4">
+            <div className="px-6 py-4 border-b">
               <SheetTitle className="text-lg font-semibold">
                 Navigation
               </SheetTitle>
             </div>
 
-            <nav className="flex-1">
-              <div className="space-y-4">
+            <nav className="flex-1 px-6 py-4">
+              <div className="space-y-2">
                 {navItems.map((item) => (
                   <Link
                     key={item.href}
                     to={item.href}
-                    className="block text-base text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-slate-100 transition-colors py-2"
+                    className="block px-3 py-2 text-base text-slate-700 hover:text-slate-900 hover:bg-slate-100 dark:text-slate-300 dark:hover:text-slate-100 dark:hover:bg-slate-800 rounded-md transition-colors"
                     onClick={() => setOpen(false)}
                   >
                     {item.label}
