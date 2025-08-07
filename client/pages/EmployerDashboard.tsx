@@ -107,7 +107,7 @@ export default function EmployerDashboard() {
         </div>
 
         {/* Stats Cards */}
-        <div className="grid md:grid-cols-4 gap-6 mb-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-8">
           <Card className="bg-white/70 backdrop-blur-sm border-white/40">
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
