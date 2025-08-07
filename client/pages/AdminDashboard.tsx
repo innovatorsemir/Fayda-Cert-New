@@ -256,7 +256,11 @@ export default function AdminDashboard() {
                         </div>
                       </div>
                       <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
-                        <Button size="sm" variant="outline" className="w-full sm:w-auto">
+                        <Button
+                          size="sm"
+                          variant="outline"
+                          className="w-full sm:w-auto"
+                        >
                           <Eye className="mr-2 h-3 w-3" />
                           Review Documents
                         </Button>
@@ -270,7 +274,11 @@ export default function AdminDashboard() {
                               <span className="hidden sm:inline">Approve</span>
                               <span className="sm:hidden">✓</span>
                             </Button>
-                            <Button size="sm" variant="destructive" className="flex-1 sm:flex-none">
+                            <Button
+                              size="sm"
+                              variant="destructive"
+                              className="flex-1 sm:flex-none"
+                            >
                               <UserX className="mr-1 h-3 w-3" />
                               <span className="hidden sm:inline">Reject</span>
                               <span className="sm:hidden">✗</span>
@@ -346,7 +354,11 @@ export default function AdminDashboard() {
                         </div>
                       </div>
                       <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
-                        <Button size="sm" variant="outline" className="w-full sm:w-auto">
+                        <Button
+                          size="sm"
+                          variant="outline"
+                          className="w-full sm:w-auto"
+                        >
                           <Eye className="mr-2 h-3 w-3" />
                           Investigate
                         </Button>
@@ -356,7 +368,9 @@ export default function AdminDashboard() {
                             className="bg-blue-600 hover:bg-blue-700 text-white w-full sm:w-auto"
                           >
                             <CheckCircle className="mr-2 h-3 w-3" />
-                            <span className="hidden sm:inline">Mark Resolved</span>
+                            <span className="hidden sm:inline">
+                              Mark Resolved
+                            </span>
                             <span className="sm:hidden">Resolve</span>
                           </Button>
                         )}

@@ -221,17 +221,31 @@ export default function StudentDashboard() {
                         </div>
                       </div>
                       <div className="flex flex-wrap items-center gap-2">
-                        <Button size="sm" variant="outline" className="flex-1 min-w-fit">
+                        <Button
+                          size="sm"
+                          variant="outline"
+                          className="flex-1 min-w-fit"
+                        >
                           <Eye className="mr-1 h-3 w-3" />
                           <span className="hidden sm:inline">View Details</span>
                           <span className="sm:hidden">View</span>
                         </Button>
-                        <Button size="sm" variant="outline" className="flex-1 min-w-fit">
+                        <Button
+                          size="sm"
+                          variant="outline"
+                          className="flex-1 min-w-fit"
+                        >
                           <Shield className="mr-1 h-3 w-3" />
-                          <span className="hidden sm:inline">Privacy Settings</span>
+                          <span className="hidden sm:inline">
+                            Privacy Settings
+                          </span>
                           <span className="sm:hidden">Privacy</span>
                         </Button>
-                        <Button size="sm" variant="outline" className="flex-1 min-w-fit">
+                        <Button
+                          size="sm"
+                          variant="outline"
+                          className="flex-1 min-w-fit"
+                        >
                           <Download className="mr-1 h-3 w-3" />
                           <span className="hidden sm:inline">Download</span>
                           <span className="sm:hidden">Download</span>

@@ -137,7 +137,9 @@ export default function InstitutionDashboard() {
                   <p className="text-2xl font-bold text-slate-900 dark:text-slate-100">
                     {certificates.filter((c) => c.status === "signed").length}
                   </p>
-                  <p className="text-sm text-slate-600 dark:text-slate-400">Digitally Signed</p>
+                  <p className="text-sm text-slate-600 dark:text-slate-400">
+                    Digitally Signed
+                  </p>
                 </div>
                 <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
                   <Shield className="h-6 w-6 text-green-600" />
@@ -250,13 +252,21 @@ export default function InstitutionDashboard() {
                         </div>
                       </div>
                       <div className="flex flex-wrap items-center gap-2">
-                        <Button size="sm" variant="outline" className="flex-1 min-w-fit">
+                        <Button
+                          size="sm"
+                          variant="outline"
+                          className="flex-1 min-w-fit"
+                        >
                           <Eye className="mr-1 h-3 w-3" />
                           <span className="hidden sm:inline">View Details</span>
                           <span className="sm:hidden">View</span>
                         </Button>
                         {cert.status === "draft" && (
-                          <Button size="sm" variant="outline" className="flex-1 min-w-fit">
+                          <Button
+                            size="sm"
+                            variant="outline"
+                            className="flex-1 min-w-fit"
+                          >
                             <Upload className="mr-1 h-3 w-3" />
                             <span className="hidden sm:inline">Upload</span>
                             <span className="sm:hidden">Upload</span>
@@ -268,7 +278,9 @@ export default function InstitutionDashboard() {
                             className="bg-blue-600 hover:bg-blue-700 text-white flex-1 min-w-fit"
                           >
                             <Shield className="mr-1 h-3 w-3" />
-                            <span className="hidden sm:inline">Sign Certificate</span>
+                            <span className="hidden sm:inline">
+                              Sign Certificate
+                            </span>
                             <span className="sm:hidden">Sign</span>
                           </Button>
                         )}

@@ -135,7 +135,9 @@ export default function EmployerDashboard() {
                         .length
                     }
                   </p>
-                  <p className="text-sm text-slate-600 dark:text-slate-400">Verified</p>
+                  <p className="text-sm text-slate-600 dark:text-slate-400">
+                    Verified
+                  </p>
                 </div>
                 <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
                   <CheckCircle className="h-6 w-6 text-green-600" />
@@ -154,7 +156,9 @@ export default function EmployerDashboard() {
                       ).length
                     }
                   </p>
-                  <p className="text-sm text-slate-600 dark:text-slate-400">Pending Consent</p>
+                  <p className="text-sm text-slate-600 dark:text-slate-400">
+                    Pending Consent
+                  </p>
                 </div>
                 <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center">
                   <Clock className="h-6 w-6 text-orange-600" />
@@ -166,8 +170,12 @@ export default function EmployerDashboard() {
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-2xl font-bold text-slate-900 dark:text-slate-100">98.5%</p>
-                  <p className="text-sm text-slate-600 dark:text-slate-400">Success Rate</p>
+                  <p className="text-2xl font-bold text-slate-900 dark:text-slate-100">
+                    98.5%
+                  </p>
+                  <p className="text-sm text-slate-600 dark:text-slate-400">
+                    Success Rate
+                  </p>
                 </div>
                 <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
                   <Shield className="h-6 w-6 text-blue-600" />
@@ -402,20 +410,36 @@ export default function EmployerDashboard() {
                         </div>
                       </div>
                       <div className="flex flex-wrap items-center gap-2">
-                        <Button size="sm" variant="outline" className="flex-1 min-w-fit">
+                        <Button
+                          size="sm"
+                          variant="outline"
+                          className="flex-1 min-w-fit"
+                        >
                           <Eye className="mr-1 h-3 w-3" />
                           <span className="hidden sm:inline">View Details</span>
                           <span className="sm:hidden">View</span>
                         </Button>
-                        <Button size="sm" variant="outline" className="flex-1 min-w-fit">
+                        <Button
+                          size="sm"
+                          variant="outline"
+                          className="flex-1 min-w-fit"
+                        >
                           <Download className="mr-1 h-3 w-3" />
-                          <span className="hidden sm:inline">Download Report</span>
+                          <span className="hidden sm:inline">
+                            Download Report
+                          </span>
                           <span className="sm:hidden">Download</span>
                         </Button>
                         {verification.blockchainHash && (
-                          <Button size="sm" variant="outline" className="flex-1 min-w-fit">
+                          <Button
+                            size="sm"
+                            variant="outline"
+                            className="flex-1 min-w-fit"
+                          >
                             <Hash className="mr-1 h-3 w-3" />
-                            <span className="hidden sm:inline">Verify Hash</span>
+                            <span className="hidden sm:inline">
+                              Verify Hash
+                            </span>
                             <span className="sm:hidden">Hash</span>
                           </Button>
                         )}
