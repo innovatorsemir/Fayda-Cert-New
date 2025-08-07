@@ -177,9 +177,9 @@ export default function EmployerDashboard() {
           </Card>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
           {/* Certificate Verification Tool */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 w-full min-w-0">
             <Card className="bg-white/70 backdrop-blur-sm border-white/40 mb-8">
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-2">
