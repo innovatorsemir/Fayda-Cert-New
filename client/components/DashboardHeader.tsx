@@ -72,25 +72,25 @@ export function DashboardHeader({
 
   return (
     <header className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-white/20 dark:border-slate-700/20 sticky top-0 z-50">
-      <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-4">
-          <Link to="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center">
-              <FileCheck className="h-6 w-6 text-white" />
+      <div className="container mx-auto px-4 md:px-6 py-4 flex items-center justify-between">
+        <div className="flex items-center gap-2 md:gap-4 min-w-0 flex-1">
+          <Link to="/" className="flex items-center gap-2 md:gap-3 min-w-0">
+            <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center shrink-0">
+              <FileCheck className="h-4 w-4 md:h-6 md:w-6 text-white" />
             </div>
-            <div>
-              <h1 className="text-xl font-bold text-slate-900 dark:text-slate-100">
+            <div className="min-w-0">
+              <h1 className="text-lg md:text-xl font-bold text-slate-900 dark:text-slate-100 truncate">
                 Fayda
               </h1>
-              <p className="text-xs text-slate-600 dark:text-slate-400">
+              <p className="text-xs text-slate-600 dark:text-slate-400 truncate">
                 {portalName}
               </p>
             </div>
           </Link>
           <div className="h-6 w-px bg-slate-300 dark:bg-slate-600 hidden md:block"></div>
-          <div className="hidden md:flex items-center gap-2">
-            <IconComponent className={`h-5 w-5 ${config.color}`} />
-            <span className="font-medium text-slate-900 dark:text-slate-100">
+          <div className="hidden md:flex items-center gap-2 min-w-0">
+            <IconComponent className={`h-5 w-5 ${config.color} shrink-0`} />
+            <span className="font-medium text-slate-900 dark:text-slate-100 truncate">
               {userName}
             </span>
           </div>
