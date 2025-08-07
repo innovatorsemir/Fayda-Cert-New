@@ -11,7 +11,7 @@ import {
   Briefcase,
   Shield,
   Mail,
-  Lock
+  Lock,
 } from "lucide-react";
 
 export default function LoginPage() {
@@ -26,7 +26,7 @@ export default function LoginPage() {
       description: "Access your certificates and verification history",
       icon: GraduationCap,
       color: "from-green-500 to-emerald-600",
-      route: "/student-dashboard"
+      route: "/student-dashboard",
     },
     {
       id: "institution",
@@ -34,7 +34,7 @@ export default function LoginPage() {
       description: "Manage and issue student certificates",
       icon: Building2,
       color: "from-blue-500 to-indigo-600",
-      route: "/institution-dashboard"
+      route: "/institution-dashboard",
     },
     {
       id: "employer",
@@ -42,7 +42,7 @@ export default function LoginPage() {
       description: "Verify candidate credentials",
       icon: Briefcase,
       color: "from-purple-500 to-violet-600",
-      route: "/employer-dashboard"
+      route: "/employer-dashboard",
     },
     {
       id: "admin",
@@ -50,14 +50,14 @@ export default function LoginPage() {
       description: "Manage platform operations and oversight",
       icon: Shield,
       color: "from-red-500 to-orange-600",
-      route: "/admin-dashboard"
-    }
+      route: "/admin-dashboard",
+    },
   ];
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
     if (selectedRole) {
-      const role = roles.find(r => r.id === selectedRole);
+      const role = roles.find((r) => r.id === selectedRole);
       if (role) {
         window.location.href = role.route;
       }
@@ -71,32 +71,44 @@ export default function LoginPage() {
       <div className="container mx-auto px-6 py-16">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-3xl font-bold text-slate-900 mb-4">Sign In to Fayda</h1>
-            <p className="text-slate-600">Select your role and sign in to access your dashboard</p>
+            <h1 className="text-3xl font-bold text-slate-900 mb-4">
+              Sign In to Fayda
+            </h1>
+            <p className="text-slate-600">
+              Select your role and sign in to access your dashboard
+            </p>
           </div>
 
           {!selectedRole ? (
             /* Role Selection */
             <div className="grid md:grid-cols-2 gap-6">
               {roles.map((role) => (
-                <Card 
+                <Card
                   key={role.id}
                   className="bg-white/70 backdrop-blur-sm border-white/40 hover:shadow-lg transition-all cursor-pointer group"
                   onClick={() => setSelectedRole(role.id)}
                 >
                   <CardHeader className="pb-4">
                     <div className="flex items-center gap-4">
-                      <div className={`w-12 h-12 bg-gradient-to-br ${role.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform`}>
+                      <div
+                        className={`w-12 h-12 bg-gradient-to-br ${role.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform`}
+                      >
                         <role.icon className="h-6 w-6 text-white" />
                       </div>
                       <div>
-                        <CardTitle className="text-xl text-slate-900">{role.title}</CardTitle>
-                        <p className="text-sm text-slate-600">{role.description}</p>
+                        <CardTitle className="text-xl text-slate-900">
+                          {role.title}
+                        </CardTitle>
+                        <p className="text-sm text-slate-600">
+                          {role.description}
+                        </p>
                       </div>
                     </div>
                   </CardHeader>
                   <CardContent className="pt-0">
-                    <Button className={`w-full bg-gradient-to-r ${role.color} hover:opacity-90 text-white`}>
+                    <Button
+                      className={`w-full bg-gradient-to-r ${role.color} hover:opacity-90 text-white`}
+                    >
                       Continue as {role.title}
                     </Button>
                   </CardContent>
@@ -110,16 +122,22 @@ export default function LoginPage() {
                 <CardHeader className="text-center pb-6">
                   <div className="flex items-center justify-center gap-3 mb-4">
                     {(() => {
-                      const role = roles.find(r => r.id === selectedRole);
+                      const role = roles.find((r) => r.id === selectedRole);
                       if (role) {
                         return (
                           <>
-                            <div className={`w-12 h-12 bg-gradient-to-br ${role.color} rounded-xl flex items-center justify-center`}>
+                            <div
+                              className={`w-12 h-12 bg-gradient-to-br ${role.color} rounded-xl flex items-center justify-center`}
+                            >
                               <role.icon className="h-6 w-6 text-white" />
                             </div>
                             <div className="text-left">
-                              <CardTitle className="text-xl text-slate-900">{role.title} Login</CardTitle>
-                              <p className="text-sm text-slate-600">Enter your credentials</p>
+                              <CardTitle className="text-xl text-slate-900">
+                                {role.title} Login
+                              </CardTitle>
+                              <p className="text-sm text-slate-600">
+                                Enter your credentials
+                              </p>
                             </div>
                           </>
                         );
@@ -165,20 +183,23 @@ export default function LoginPage() {
                         <input type="checkbox" className="rounded" />
                         Remember me
                       </label>
-                      <Link to="/forgot-password" className="text-blue-600 hover:underline">
+                      <Link
+                        to="/forgot-password"
+                        className="text-blue-600 hover:underline"
+                      >
                         Forgot password?
                       </Link>
                     </div>
-                    <Button 
-                      type="submit" 
-                      className={`w-full bg-gradient-to-r ${roles.find(r => r.id === selectedRole)?.color} hover:opacity-90 text-white`}
+                    <Button
+                      type="submit"
+                      className={`w-full bg-gradient-to-r ${roles.find((r) => r.id === selectedRole)?.color} hover:opacity-90 text-white`}
                     >
                       Sign In
                     </Button>
                   </form>
                   <div className="mt-6 text-center">
-                    <Button 
-                      variant="ghost" 
+                    <Button
+                      variant="ghost"
                       onClick={() => setSelectedRole("")}
                       className="text-slate-600 hover:text-slate-900"
                     >
@@ -187,7 +208,10 @@ export default function LoginPage() {
                   </div>
                   <div className="mt-4 text-center text-sm text-slate-600">
                     Don't have an account?{" "}
-                    <Link to="/register" className="text-blue-600 hover:underline">
+                    <Link
+                      to="/register"
+                      className="text-blue-600 hover:underline"
+                    >
                       Register here
                     </Link>
                   </div>

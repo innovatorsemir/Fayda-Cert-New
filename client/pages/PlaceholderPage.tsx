@@ -9,7 +9,10 @@ interface PlaceholderPageProps {
   description: string;
 }
 
-export default function PlaceholderPage({ title, description }: PlaceholderPageProps) {
+export default function PlaceholderPage({
+  title,
+  description,
+}: PlaceholderPageProps) {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-blue-900 dark:to-indigo-900">
       <Header variant="minimal" showBackButton />
@@ -27,7 +30,8 @@ export default function PlaceholderPage({ title, description }: PlaceholderPageP
             <CardContent className="text-center">
               <p className="text-slate-600 mb-6">{description}</p>
               <p className="text-sm text-slate-500 mb-8">
-                This page is currently under development. Please check back soon or continue exploring other features of the platform.
+                This page is currently under development. Please check back soon
+                or continue exploring other features of the platform.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/">
@@ -36,9 +40,7 @@ export default function PlaceholderPage({ title, description }: PlaceholderPageP
                   </Button>
                 </Link>
                 <Link to="/login">
-                  <Button variant="outline">
-                    Sign In
-                  </Button>
+                  <Button variant="outline">Sign In</Button>
                 </Link>
               </div>
             </CardContent>
