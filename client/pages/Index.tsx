@@ -393,7 +393,7 @@ export default function Index() {
                 <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center">
                   <FileCheck className="h-4 w-4 text-white" />
                 </div>
-                <span className="font-bold text-lg">Fayda</span>
+                <span className="font-bold text-lg">FaydaCert</span>
               </div>
               <p className="text-slate-400 text-sm">
                 Secure, blockchain-powered certificate verification for the
