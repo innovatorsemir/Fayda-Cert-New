@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { MobileNav } from "@/components/MobileNav";
 import {
   GraduationCap,
   Building2,
@@ -37,32 +38,35 @@ export default function Index() {
               <p className="text-xs text-slate-600">Certificate Verification</p>
             </div>
           </div>
-          <nav className="hidden md:flex items-center gap-6">
-            <Link
-              to="/about"
-              className="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-slate-100 transition-colors"
-            >
-              About
-            </Link>
-            <Link
-              to="/how-it-works"
-              className="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-slate-100 transition-colors"
-            >
-              How it Works
-            </Link>
-            <Link
-              to="/contact"
-              className="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-slate-100 transition-colors"
-            >
-              Contact
-            </Link>
-            <ThemeToggle />
-            <Link to="/login">
-              <Button variant="outline" size="sm">
-                Sign In
-              </Button>
-            </Link>
-          </nav>
+          <div className="flex items-center gap-4">
+            <nav className="hidden md:flex items-center gap-6">
+              <Link
+                to="/about"
+                className="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-slate-100 transition-colors"
+              >
+                About
+              </Link>
+              <Link
+                to="/how-it-works"
+                className="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-slate-100 transition-colors"
+              >
+                How it Works
+              </Link>
+              <Link
+                to="/contact"
+                className="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-slate-100 transition-colors"
+              >
+                Contact
+              </Link>
+              <ThemeToggle />
+              <Link to="/login">
+                <Button variant="outline" size="sm">
+                  Sign In
+                </Button>
+              </Link>
+            </nav>
+            <MobileNav />
+          </div>
         </div>
       </header>
 
