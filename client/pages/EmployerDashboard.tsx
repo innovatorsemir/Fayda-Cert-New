@@ -166,8 +166,8 @@ export default function EmployerDashboard() {
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-2xl font-bold text-slate-900">98.5%</p>
-                  <p className="text-sm text-slate-600">Success Rate</p>
+                  <p className="text-2xl font-bold text-slate-900 dark:text-slate-100">98.5%</p>
+                  <p className="text-sm text-slate-600 dark:text-slate-400">Success Rate</p>
                 </div>
                 <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
                   <Shield className="h-6 w-6 text-blue-600" />
