@@ -33,8 +33,9 @@ export default function Index() {
             Blockchain-Secured Certificate Verification
           </Badge>
           <h1 className="text-5xl font-bold text-slate-900 dark:text-slate-100 mb-6 leading-tight">
-            Secure Academic Certificate
+            Secure Academic
             <br className="block sm:hidden" />
+            Certificate
             <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
               {" "}
               Verification
