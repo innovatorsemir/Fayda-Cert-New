@@ -362,7 +362,7 @@ export default function InstitutionDashboard() {
                     className="w-full justify-start"
                   >
                     <Users className="mr-2 h-4 w-4" />
-                    Link Student Fayda ID
+                    Link Student FaydaCert ID
                   </Button>
                   <Button
                     variant="outline"
