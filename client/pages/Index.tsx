@@ -204,7 +204,7 @@ export default function Index() {
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-4 w-4 text-blue-500" />
-                  Link certificates to Fayda IDs
+                  Link certificates to FaydaCert IDs
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-4 w-4 text-blue-500" />
