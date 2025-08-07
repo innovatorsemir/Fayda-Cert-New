@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { MobileNav } from "@/components/MobileNav";
+import { DashboardMobileNav } from "@/components/DashboardMobileNav";
 import {
   FileCheck,
   Bell,
