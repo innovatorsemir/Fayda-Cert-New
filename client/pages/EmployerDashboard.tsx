@@ -94,8 +94,8 @@ export default function EmployerDashboard() {
       <div className="container mx-auto px-6 py-8">
         {/* Welcome Section */}
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-slate-900 mb-2">Employer Dashboard</h1>
-          <p className="text-slate-600">Verify candidate credentials securely and instantly</p>
+          <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-2">Employer Dashboard</h1>
+          <p className="text-slate-600 dark:text-slate-300">Verify candidate credentials securely and instantly</p>
         </div>
 
         {/* Stats Cards */}
