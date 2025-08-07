@@ -72,7 +72,7 @@ export default function LoginPage() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h1 className="text-3xl font-bold text-slate-900 mb-4">
-              Sign In to Fayda
+              Sign In to FaydaCert
             </h1>
             <p className="text-slate-600">
               Select your role and sign in to access your dashboard
