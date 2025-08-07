@@ -277,16 +277,16 @@ export default function EmployerDashboard() {
                       <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
                         <CheckCircle className="h-8 w-8 text-green-600" />
                       </div>
-                      <h3 className="text-lg font-semibold text-slate-900 mb-2">
+                      <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-2">
                         Certificate Verified Successfully
                       </h3>
-                      <p className="text-sm text-slate-600">
+                      <p className="text-sm text-slate-600 dark:text-slate-300">
                         Student has granted consent for this verification
                       </p>
                     </div>
 
-                    <div className="bg-white/60 rounded-lg p-4 space-y-3">
-                      <div className="grid grid-cols-2 gap-4 text-sm">
+                    <div className="bg-white/60 dark:bg-slate-800/60 rounded-lg p-4 space-y-3">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
                         <div>
                           <span className="text-slate-500">Student Name:</span>
                           <p className="font-medium">Sarah Johnson</p>
