@@ -472,7 +472,7 @@ export default function Index() {
             </div>
           </div>
           <div className="border-t border-slate-800 mt-8 pt-8 text-center text-sm text-slate-400">
-            © 2025 Fayda Certificate Verification Platform. All rights
+            © 2025 FaydaCert Certificate Verification Platform. All rights
             reserved. By Semir-X Projects
           </div>
         </div>
