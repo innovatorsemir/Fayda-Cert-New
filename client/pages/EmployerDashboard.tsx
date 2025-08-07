@@ -401,19 +401,22 @@ export default function EmployerDashboard() {
                           </Badge>
                         </div>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <Button size="sm" variant="outline">
-                          <Eye className="mr-2 h-3 w-3" />
-                          View Details
+                      <div className="flex flex-wrap items-center gap-2">
+                        <Button size="sm" variant="outline" className="flex-1 min-w-fit">
+                          <Eye className="mr-1 h-3 w-3" />
+                          <span className="hidden sm:inline">View Details</span>
+                          <span className="sm:hidden">View</span>
                         </Button>
-                        <Button size="sm" variant="outline">
-                          <Download className="mr-2 h-3 w-3" />
-                          Download Report
+                        <Button size="sm" variant="outline" className="flex-1 min-w-fit">
+                          <Download className="mr-1 h-3 w-3" />
+                          <span className="hidden sm:inline">Download Report</span>
+                          <span className="sm:hidden">Download</span>
                         </Button>
                         {verification.blockchainHash && (
-                          <Button size="sm" variant="outline">
-                            <Hash className="mr-2 h-3 w-3" />
-                            Verify Hash
+                          <Button size="sm" variant="outline" className="flex-1 min-w-fit">
+                            <Hash className="mr-1 h-3 w-3" />
+                            <span className="hidden sm:inline">Verify Hash</span>
+                            <span className="sm:hidden">Hash</span>
                           </Button>
                         )}
                       </div>
