@@ -120,7 +120,9 @@ export default function InstitutionDashboard() {
                   <p className="text-2xl font-bold text-slate-900 dark:text-slate-100">
                     {certificates.length}
                   </p>
-                  <p className="text-sm text-slate-600 dark:text-slate-400">Total Certificates</p>
+                  <p className="text-sm text-slate-600 dark:text-slate-400">
+                    Total Certificates
+                  </p>
                 </div>
                 <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
                   <FileCheck className="h-6 w-6 text-blue-600" />

@@ -115,7 +115,9 @@ export default function EmployerDashboard() {
                   <p className="text-2xl font-bold text-slate-900 dark:text-slate-100">
                     {verificationHistory.length}
                   </p>
-                  <p className="text-sm text-slate-600 dark:text-slate-400">Total Verifications</p>
+                  <p className="text-sm text-slate-600 dark:text-slate-400">
+                    Total Verifications
+                  </p>
                 </div>
                 <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
                   <FileCheck className="h-6 w-6 text-purple-600" />
