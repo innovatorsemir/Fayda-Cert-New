@@ -106,7 +106,7 @@ export default function Index() {
                 <Scan className="h-6 w-6 text-purple-600" />
               </div>
               <h3 className="font-semibold text-slate-900 mb-2">
-                Fayda ID Integration
+                FaydaCert ID Integration
               </h3>
               <p className="text-sm text-slate-600">
                 Seamless integration with national identity system
