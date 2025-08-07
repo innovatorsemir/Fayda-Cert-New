@@ -113,7 +113,7 @@ export default function InstitutionDashboard() {
 
         {/* Stats Cards */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-8">
-          <Card className="bg-white/70 backdrop-blur-sm border-white/40">
+          <Card className="bg-white/70 dark:bg-slate-800/70 backdrop-blur-sm border-white/40 dark:border-slate-700/40">
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
@@ -130,7 +130,7 @@ export default function InstitutionDashboard() {
               </div>
             </CardContent>
           </Card>
-          <Card className="bg-white/70 backdrop-blur-sm border-white/40">
+          <Card className="bg-white/70 dark:bg-slate-800/70 backdrop-blur-sm border-white/40 dark:border-slate-700/40">
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
@@ -145,7 +145,7 @@ export default function InstitutionDashboard() {
               </div>
             </CardContent>
           </Card>
-          <Card className="bg-white/70 backdrop-blur-sm border-white/40">
+          <Card className="bg-white/70 dark:bg-slate-800/70 backdrop-blur-sm border-white/40 dark:border-slate-700/40">
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
@@ -163,7 +163,7 @@ export default function InstitutionDashboard() {
               </div>
             </CardContent>
           </Card>
-          <Card className="bg-white/70 backdrop-blur-sm border-white/40">
+          <Card className="bg-white/70 dark:bg-slate-800/70 backdrop-blur-sm border-white/40 dark:border-slate-700/40">
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
@@ -186,7 +186,7 @@ export default function InstitutionDashboard() {
         <div className="grid lg:grid-cols-3 gap-6 md:gap-8">
           {/* Certificate Management */}
           <div className="lg:col-span-2">
-            <Card className="bg-white/70 backdrop-blur-sm border-white/40">
+            <Card className="bg-white/70 dark:bg-slate-800/70 backdrop-blur-sm border-white/40 dark:border-slate-700/40">
               <CardHeader className="flex flex-row items-center justify-between">
                 <CardTitle className="text-xl">
                   Certificate Management
@@ -279,7 +279,7 @@ export default function InstitutionDashboard() {
 
           {/* Verification Requests */}
           <div>
-            <Card className="bg-white/70 backdrop-blur-sm border-white/40">
+            <Card className="bg-white/70 dark:bg-slate-800/70 backdrop-blur-sm border-white/40 dark:border-slate-700/40">
               <CardHeader className="flex flex-row items-center justify-between">
                 <CardTitle className="text-xl">Verification Requests</CardTitle>
                 <Button variant="ghost" size="sm">
