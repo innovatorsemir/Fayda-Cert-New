@@ -209,7 +209,7 @@ export default function AdminDashboard() {
                   {pendingInstitutions.map((institution) => (
                     <div
                       key={institution.id}
-                      className="border border-slate-200 rounded-lg p-4 bg-white/50"
+                      className="border border-slate-200 dark:border-slate-700 rounded-lg p-4 bg-white/50 dark:bg-slate-800/50"
                     >
                       <div className="flex items-start justify-between mb-3">
                         <div className="flex-1">
@@ -302,7 +302,7 @@ export default function AdminDashboard() {
                   {fraudAlerts.map((alert) => (
                     <div
                       key={alert.id}
-                      className="border border-slate-200 rounded-lg p-4 bg-white/50"
+                      className="border border-slate-200 dark:border-slate-700 rounded-lg p-4 bg-white/50 dark:bg-slate-800/50"
                     >
                       <div className="flex items-start justify-between mb-3">
                         <div className="flex-1">
