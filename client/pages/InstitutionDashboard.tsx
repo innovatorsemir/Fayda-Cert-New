@@ -281,7 +281,7 @@ export default function InstitutionDashboard() {
           </div>
 
           {/* Verification Requests */}
-          <div>
+          <div className="w-full min-w-0">
             <Card className="bg-white/70 dark:bg-slate-800/70 backdrop-blur-sm border-white/40 dark:border-slate-700/40">
               <CardHeader className="flex flex-row items-center justify-between">
                 <CardTitle className="text-xl">Verification Requests</CardTitle>
