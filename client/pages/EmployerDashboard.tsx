@@ -203,7 +203,7 @@ export default function EmployerDashboard() {
                       <div className="flex gap-2">
                         <Input
                           id="faydaId"
-                          placeholder="Enter Fayda ID (e.g., FYD-2023-001234)"
+                          placeholder="Enter FaydaCert ID (e.g., FYD-2023-001234)"
                           value={faydaId}
                           onChange={(e) => setFaydaId(e.target.value)}
                           className="flex-1"
