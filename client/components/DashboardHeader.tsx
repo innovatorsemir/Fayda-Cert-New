@@ -80,7 +80,7 @@ export function DashboardHeader({
             </div>
             <div className="min-w-0">
               <h1 className="text-lg md:text-xl font-bold text-slate-900 dark:text-slate-100 truncate">
-                Fayda
+                FaydaCert
               </h1>
               <p className="text-xs text-slate-600 dark:text-slate-400 truncate">
                 {portalName}
