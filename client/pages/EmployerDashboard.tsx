@@ -199,7 +199,7 @@ export default function EmployerDashboard() {
                 {verificationStep === "input" && (
                   <form onSubmit={handleVerification} className="space-y-4">
                     <div className="space-y-2">
-                      <Label htmlFor="faydaId">Fayda ID</Label>
+                      <Label htmlFor="faydaId">FaydaCert ID</Label>
                       <div className="flex gap-2">
                         <Input
                           id="faydaId"
